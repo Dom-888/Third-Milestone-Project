@@ -12,18 +12,16 @@ app.config["MONGO_URI"] = os.getenv("connection_string")
 # Assign the database collection to the variable "coll"
 coll = PyMongo(app).db.trailers 
 
-# Order the collection in a printable list (for testing purpose)
-coll_list = []
-for dict in coll.find():
-    for key, value in dict.items():
-        if key != "_id":
-            coll_list.append(key + " : " + str(value))
+# Order the collection in an iterable list
+doc_list = []
+for doc in coll.find():
+    doc_list.append(doc)
 
 # Landing page
 @app.route('/') 
 @app.route('/first_function')
 def first_function():
-    return render_template("index.html", output = coll_list)
+    return render_template("index.html", output = doc_list)
 
 if __name__ == '__main__':  
     app.run(host=os.getenv("IP", "0.0.0.0"),

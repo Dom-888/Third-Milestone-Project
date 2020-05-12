@@ -16,7 +16,26 @@
 
 </head>
 <body>
-    {{output}}
+
+    <!-- Iterate through the list of documents to generate the cards -->
+
+    {% for doc in output %}
+        <div class="card"> 
+            {% for key, value in doc.items() %}
+                {% if  key == "title" %}
+                    <p>{{ value }}</p>
+                {% endif %}    
+                {% if  key == "url" %}
+                    <p>{{ value }}</p>
+                {% endif %}    
+                {% if  key == "quote" %}
+                    <p>{{ value }}</p>
+                {% endif %}                                    
+            {% endfor %}        
+        </div>
+    {% endfor %}
+
+
     <!-- Scripts -->
     <script src="static/js/script.js"></script>
     <!-- In case of multi-page layout: -->
