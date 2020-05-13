@@ -22,28 +22,32 @@
 <body>
 
 	<div class="container">
+		<div class="row">
 
-		<!-- Iterate through the list of documents to generate the cards -->
-		{% for doc in output %}
-		<div class="card">
-			{% for key, value in doc.items() %}
-			{% if  key == "title" %}
-			<p>{{ value }}</p>
-			{% endif %}
-			{% if  key == "url" %}
-			<iframe width="780" height="439" src="{{ value }}" frameborder="0"
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen></iframe>
-			{% endif %}
-			{% if  key == "quote" %}
-			<p>{{ value }}</p>
-			{% endif %}
+			<!-- Iterate through the list of documents to generate the cards -->
+			{% for doc in output %}
+			<div class="col-12 col-md-6">
+				<div class="card">
+					{% for key, value in doc.items() %}
+					{% if  key == "title" %}
+					<p>{{ value }}</p>
+					{% endif %}
+					{% if  key == "url" %}
+					<iframe class="ytb-video" src="{{ value }}" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+					{% endif %}
+					{% if  key == "quote" %}
+					<p>{{ value }}</p>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</div>
 			{% endfor %}
-		</div>
-		{% endfor %}
 
+		</div>
 	</div>
-    
+
 	<!-- Scripts -->
 	<script src="static/js/script.js"></script>
 	<!-- In case of multi-page layout: -->

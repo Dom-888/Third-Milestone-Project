@@ -1,8 +1,27 @@
+
+.container{
+    border: solid blue;
+    text-align: center;
+}
+
 .card {
     border: solid red;
     display: inline-block;
+    padding: 20px;
+    margin: 20px;
 }
 
-.container {
-    border: solid blue;
+.row {
+    border: solid purple;
 }
+
+
+.ytb-video {
+    padding: 20px 0;
+}
+
+
+
+
+
+
