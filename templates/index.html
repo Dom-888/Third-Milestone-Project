@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Meta data -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- Style sheets -->
-    <link rel="stylesheet" href="static/css/style.css" />
-    <!-- In case of multi-page layout: -->
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/> -->
 
-    <!-- Page title -->
-    <title>Document</title>
+<head>
+	<!-- Meta data -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style sheets -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="static/css/style.css" />
+	<!-- In case of multi-page layout: -->
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/> -->
+
+	<!-- Page title -->
+	<title>Document</title>
 
 </head>
+
 <body>
 
-    <!-- Iterate through the list of documents to generate the cards -->
+	<div class="container">
 
-    {% for doc in output %}
-        <div class="card"> 
-            {% for key, value in doc.items() %}
-                {% if  key == "title" %}
-                    <p>{{ value }}</p>
-                {% endif %}    
-                {% if  key == "url" %}
-                    <iframe width="780" height="439" src= "{{ value }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                {% endif %}    
-                {% if  key == "quote" %}
-                    <p>{{ value }}</p>
-                {% endif %}                                    
-            {% endfor %}        
-        </div>
-    {% endfor %}
+		<!-- Iterate through the list of documents to generate the cards -->
+		{% for doc in output %}
+		<div class="card">
+			{% for key, value in doc.items() %}
+			{% if  key == "title" %}
+			<p>{{ value }}</p>
+			{% endif %}
+			{% if  key == "url" %}
+			<iframe width="780" height="439" src="{{ value }}" frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+			{% endif %}
+			{% if  key == "quote" %}
+			<p>{{ value }}</p>
+			{% endif %}
+			{% endfor %}
+		</div>
+		{% endfor %}
 
-
-    <!-- Scripts -->
-    <script src="static/js/script.js"></script>
-    <!-- In case of multi-page layout: -->
-    <!-- <link href="{{ url_for('static', filename='js/script.js') }}" /> -->
+	</div>
+    
+	<!-- Scripts -->
+	<script src="static/js/script.js"></script>
+	<!-- In case of multi-page layout: -->
+	<!-- <link href="{{ url_for('static', filename='js/script.js') }}" /> -->
 </body>
+
 </html>

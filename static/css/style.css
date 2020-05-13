@@ -2,3 +2,7 @@
     border: solid red;
     display: inline-block;
 }
+
+.container {
+    border: solid blue;
+}
