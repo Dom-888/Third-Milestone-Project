@@ -1,17 +1,17 @@
 
-.container{
+.container-fluid{
     border: solid blue;
     text-align: center;
 }
 
 .card {
     border: solid red;
-    padding: 20px;
-    margin: 20px;
+    margin: 4%;
 }
 
 .row {
     border: solid purple;
+    padding: 0 4% 4%;
 }
 
 .ytb-video-wrapper {
@@ -28,7 +28,11 @@
     height: 100%;
 }
 
-
-
+/* Laptop and desktop */
+@media only screen and (min-width: 1280px) and (orientation:landscape) {
+    .row {
+        padding: 0 12% 4%;
+    }
+}
 
 
