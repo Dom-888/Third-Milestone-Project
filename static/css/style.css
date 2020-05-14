@@ -4,9 +4,13 @@
     text-align: center;
 }
 
+.intro {
+
+}
+
 .card {
     border: solid red;
-    margin: 4%;
+    margin: 1vw;
 }
 
 .row {
@@ -31,7 +35,7 @@
 /* Laptop and desktop */
 @media only screen and (min-width: 1280px) and (orientation:landscape) {
     .row {
-        padding: 0 12% 4%;
+        padding: 0 15% 4%;
     }
 }
 
