@@ -21,9 +21,6 @@
 
 <body>
 
-
-
-
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 
@@ -32,8 +29,11 @@
 				<div class="col-12">
 					<div class="navbar">
 						<h3 class="logo">OT</h3>
-						<input class="searchbar" type="text" placeholder="Search..">
-						<button type="button" class="btn btn-add-trailer">Add Trailer +</button>
+						<div class="searchbar">
+							<input type="text" placeholder="Search..">
+							<button type="button" class="btn btn-add-search"><i data-feather="search"></i></button>
+						</div>
+						<button type="button" class="btn btn-add-trailer">Add Trailer <i data-feather="plus-square"></i></button>
 					</div>
 
 					<!-- Site description -->
@@ -57,7 +57,10 @@
 				<div class="card">
 					{% for key, value in doc.items() %}
 					{% if  key == "title" %}
-					<p>{{ value }}</p>
+					<div class="card-header">
+						<p class="movie-title">{{ value }}</p>
+						<button type="button" class="btn btn-edit"><i data-feather="edit"></i></button>
+					</div>
 					{% endif %}
 					{% if  key == "url" %}
 					<div class="ytb-video-wrapper">
@@ -79,6 +82,7 @@
 	</div>
 
 	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	<script src="static/js/script.js"></script>
 	<!-- In case of multi-page layout: -->
 	<!-- <link href="{{ url_for('static', filename='js/script.js') }}" /> -->
