@@ -19,7 +19,7 @@ def first_function():
     return render_template("index.html", docs = coll.find())
 
 # Search page
-@app.route('/search_terms', methods=['GET', 'POST'])
+@app.route('/search_terms', methods=['POST'])
 def search_terms():
     terms_to_search = request.form.get('user_search')
     coll.create_index([ ('title' , 'text')])
