@@ -23,6 +23,14 @@ for doc in coll.find():
 def first_function():
     return render_template("index.html", output = doc_list)
 
+# Search page
+@app.route('/search_terms', methods=['POST'])
+def search_terms():
+    terms_to_search = request.form.get('user_search')
+    coll.create_index([ ('title' , 'text')])
+    results = coll.find({"$text": {"$search": terms_to_search}})
+    return render_template("search_results.html", results = results)
+
 if __name__ == '__main__':  
     app.run(host=os.getenv("IP", "0.0.0.0"),
     port=int(os.getenv("PORT", "5000")), debug=True) # Remove dubug=True before publishing
