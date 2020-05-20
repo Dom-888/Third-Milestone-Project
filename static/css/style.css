@@ -1,4 +1,11 @@
 
+/*---------------Background---------------*/
+
+body {
+    background: url(../images/background-sm.jpg)#440D10 fixed left top;
+    background-size: cover;
+}
+
 /*---------------Bootstrap grid---------------*/
 
 .container-fluid{
@@ -95,9 +102,14 @@
 }
 
 
-/* Laptop and desktop */
+/*---------------Laptop and desktop---------------*/
+
 @media only screen and (min-width: 1280px) and (orientation:landscape) {
     .row {
         padding: 0 15% 4%;
+    }
+    body {
+        background-image: url(../images/background-lg.jpg);
+        background-position: center;
     }
 }
