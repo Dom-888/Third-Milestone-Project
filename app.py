@@ -26,6 +26,12 @@ def search_terms():
     results = coll.find({"$text": {"$search": terms_to_search}})
     return render_template("search_results.html", results = results)
 
+# Add trailer
+@app.route('/insert_task', methods=['POST'])
+def insert_trailer():
+    coll.insert_one(request.form.to_dict())
+    return redirect(url_for('first_function'))
+
 if __name__ == '__main__':  
     app.run(host=os.getenv("IP", "0.0.0.0"),
     port=int(os.getenv("PORT", "5000")), debug=True) # Remove dubug=True before publishing

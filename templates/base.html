@@ -44,34 +44,34 @@
 
 		</div>
 
-        
-			<!--Add-trailer modal -->
-			<div class="modal fade" id="modal_add-trailer" tabindex="-1" role="dialog"
-				aria-labelledby="modal_add_trailer" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Add a new Trailer</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+		<!--Add-trailer modal -->
+		<div class="modal fade" id="modal_add-trailer" tabindex="-1" role="dialog" aria-labelledby="modal_add_trailer"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Add a new Trailer</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-						</div>
+					</div>
+					<form action="{{ url_for('insert_trailer') }}" method="POST">
 						<div class="modal-body">
 							<div class="container">
-								<form>
-									<input name="new_title" id="new_title" type="text" placeholder="Movie title">
-									<input name="new_url" id="new_url" type="text" placeholder="Youtube url">
-									<input name="new_quote" id="new_quote" type="text" placeholder="Favorite quote">
-								</form>
+								<textarea id="title" name="title"  placeholder="Movie title"></textarea>
+								<textarea id="url" name="url" placeholder="Youtube URL"></textarea>
+								<textarea id="quote" name="quote" placeholder="Favorite quote"></textarea>
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-							<button type="button" class="btn btn-primary">Save</button>
-						</div>
-					</div>
+							<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+							<button class="btn btn-primary" type="submit" name="action">Save</button>
+                        </div>
+					</form>
 				</div>
 			</div>
+		</div>
 	</div>
 
 	<!-- Scripts -->
