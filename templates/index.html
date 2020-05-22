@@ -20,7 +20,8 @@
 		{% if  key == "title" %}
 		<div class="card-header">
 			<p class="movie-title">{{ value }}</p>
-			<button type="button" class="btn btn-edit"><i data-feather="edit"></i></button>
+            <button type="button" class="btn" data-toggle="modal" data-target="#modal-confirmation-delete"><i data-feather="trash-2"></i></button>
+			<button type="button" class="btn"><i data-feather="edit"></i></button>
 		</div>
 		{% endif %}
 		{% if  key == "url" %}
