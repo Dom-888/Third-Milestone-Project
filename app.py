@@ -14,23 +14,23 @@ coll = PyMongo(app).db.trailers
 
 # Landing page
 @app.route('/') 
-@app.route('/first_function')
-def first_function():
+@app.route('/get_trailers')
+def get_trailers():
     return render_template("index.html", docs = coll.find())
 
 # Search page
-@app.route('/search_terms', methods=['POST'])
-def search_terms():
+@app.route('/search_trailers', methods=['POST'])
+def search_trailers():
     terms_to_search = request.form.get('user_search')
     coll.create_index([ ('title' , 'text')])
     results = coll.find({"$text": {"$search": terms_to_search}})
     return render_template("search_results.html", results = results)
 
 # Add trailer
-@app.route('/insert_task', methods=['POST'])
+@app.route('/insert_trailer', methods=['POST'])
 def insert_trailer():
     coll.insert_one(request.form.to_dict())
-    return redirect(url_for('first_function'))
+    return redirect(url_for('get_trailers'))
 
 if __name__ == '__main__':  
     app.run(host=os.getenv("IP", "0.0.0.0"),
