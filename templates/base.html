@@ -27,7 +27,7 @@
 
 				<!-- Navbar -->
 				<div class="navbar">
-					<h3 class="logo">OT</h3>
+                <a href="{{url_for('get_trailers')}}" class="logo"><h3>OT</h3></a>
 					<form class="searchbar" id="search-form" action="{{ url_for('search_trailers', search=search) }}"
 						method="POST">
 						<input name="user_search" id="user_search" type="text" placeholder="Search..">
