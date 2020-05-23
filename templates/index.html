@@ -16,27 +16,18 @@
 {% for doc in docs %}
 <div class="col-12 col-md-6 col-xl-4">
 	<div class="card">
-		{% for key, value in doc.items() %}
-		{% if  key == "title" %}
 		<div class="card-header">
-			<p class="movie-title">{{ value }}</p>
-            <button type="button" class="btn" data-toggle="modal" data-target="#modal-confirmation-delete"><i data-feather="trash-2"></i></button>
+			<p class="movie-title">{{ doc.title }}</p>
+			<button type="button" class="btn" data-toggle="modal" data-target="#modal-confirmation-delete"><i data-feather="trash-2"></i></button>
 			<button type="button" class="btn"><i data-feather="edit"></i></button>
 		</div>
-		{% endif %}
-		{% if  key == "url" %}
 		<div class="ytb-video-wrapper">
-			<iframe class="ytb-video" src="{{ value }}" frameborder="0"
+			<iframe class="ytb-video" src="{{ doc.url }}" frameborder="0"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 			</iframe>
 		</div>
-		{% endif %}
-		{% if  key == "quote" %}
-		<p>{{ value }}</p>
-		{% endif %}
-		{% endfor %}
+		<p>{{ doc.quote }}</p>
 	</div>
 </div>
 {% endfor %}
-
 {% endblock %}
