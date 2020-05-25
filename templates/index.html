@@ -18,7 +18,7 @@
 	<div class="card">
 		<div class="card-header">
 			<p class="movie-title">{{ doc.title }}</p>
-			<button type="button" id="btn-trash-can" class="btn" data-toggle="modal" data-target="#modal-confirmation-delete" onclick="passTrailerId(this)" data-trailer-id="{{doc._id}}"><i data-feather="trash-2"></i></button>
+			<button type="button" id="btn-trash-can" class="btn" onclick="loadDeleteModal(this)" data-trailer-id="{{doc._id}}"><i data-feather="trash-2"></i></button>
 			<button type="button" class="btn" onclick="loadEditModal(this)" data-trailer-id="{{doc._id}}" data-trailer-title="{{doc.title}}" data-trailer-url="{{doc.url}}" data-trailer-quote="{{doc.quote}}"><i data-feather="edit"></i></button>
 		</div>
 		<div class="ytb-video-wrapper">
@@ -32,7 +32,7 @@
 {% endfor %}
 
 <!-- Delete-confirmation modal -->
-<div class="modal fade" id="modal-confirmation-delete" tabindex="-1" role="dialog" aria-labelledby="modal-confirmation-delete" aria-hidden="true">
+<div class="modal fade" id="modal-delete-confirmation" tabindex="-1" role="dialog" aria-labelledby="modal-confirmation-delete" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
