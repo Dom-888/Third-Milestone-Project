@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 
 if os.path.exists("env.py"):
     import env
@@ -31,6 +32,13 @@ def search_trailers():
 def insert_trailer():
     coll.insert_one(request.form.to_dict())
     return redirect(url_for('get_trailers'))
+
+# Delete trailer
+@app.route('/delete_trailer/<trailer_id>')
+def delete_trailer(trailer_id):
+    coll.delete_one({"_id": ObjectId(trailer_id)})
+    return redirect(url_for('get_trailers'))
+
 
 if __name__ == '__main__':  
     app.run(host=os.getenv("IP", "0.0.0.0"),
