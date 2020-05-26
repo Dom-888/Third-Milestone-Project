@@ -18,7 +18,7 @@
 	<div class="card">
 		<div class="card-header">
 			<p class="movie-title">{{ doc.title }}</p>
-			<button type="button" class="btn" onclick="loadDeleteModal(this)" data-trailer-id="{{doc._id}}"><i data-feather="trash-2"></i></button>
+			<button type="button" class="btn" onclick="loadDeleteModal(this)" data-trailer-id="{{doc._id}}" data-trailer-title="{{doc.title}}"><i data-feather="trash-2"></i></button>
 			<button type="button" class="btn" onclick="loadEditModal(this)" data-trailer-id="{{doc._id}}" data-trailer-title="{{doc.title}}" data-trailer-url="{{doc.url}}" data-trailer-quote="{{doc.quote}}"><i data-feather="edit"></i></button>
 		</div>
 		<div class="ytb-video-wrapper">
