@@ -20,7 +20,7 @@ def convert_url(url):
         embedded_url = "https://www.youtube.com/embed/" + url[-11:]
         return embedded_url
     else:
-        return "Not a youtube video"
+        return url
 
 # Landing page
 @app.route('/') 
