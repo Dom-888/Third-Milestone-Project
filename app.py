@@ -14,6 +14,14 @@ app.config["MONGO_URI"] = os.getenv("connection_string")
 # Assign the database collection to the variable "coll"
 coll = PyMongo(app).db.trailers 
 
+# Convert YouTube URLs into their embedded versions
+def convert_url(url):
+    if url[:24] == "https://www.youtube.com/" or url[:17] == "https://youtu.be/" or url[:14] == "http://y2u.be/":
+        embedded_url = "https://www.youtube.com/embed/" + url[-11:]
+        return embedded_url
+    else:
+        return "Not a youtube video"
+
 # Landing page
 @app.route('/') 
 @app.route('/get_trailers')
@@ -31,7 +39,9 @@ def search_trailers():
 # Add trailer
 @app.route('/insert_trailer', methods=['POST'])
 def insert_trailer():
-    coll.insert_one(request.form.to_dict())
+    form_trailer = request.form.to_dict()
+    form_trailer["url"] = convert_url(form_trailer["url"])
+    coll.insert_one(form_trailer)
     return redirect(url_for('get_trailers'))
 
 # Delete trailer
@@ -46,7 +56,7 @@ def update_trailer(trailer_id):
     coll.update({'_id': ObjectId(trailer_id)},
     {
         'title': request.form.get('title'),
-        'url': request.form.get('url'),
+        'url': convert_url(request.form.get('url')),
         'quote': request.form.get('quote'),
     })
     return redirect(url_for('get_trailers'))
