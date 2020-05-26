@@ -26,7 +26,10 @@ def convert_url(url):
 @app.route('/') 
 @app.route('/get_trailers')
 def get_trailers():
-    return render_template("index.html", docs = coll.find())
+    inverted_coll = []
+    for i in coll.find():
+        inverted_coll.insert(0, i)
+    return render_template("index.html", docs = inverted_coll)
 
 # Search page
 @app.route('/search_trailers', methods=['POST'])
