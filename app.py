@@ -40,6 +40,17 @@ def delete_trailer(trailer_id):
     coll.delete_one({"_id": ObjectId(trailer_id)})
     return redirect(url_for('get_trailers'))
 
+# Update trailer
+@app.route('/update_trailer/<trailer_id>', methods=["POST"])
+def update_trailer(trailer_id):
+    coll.update({'_id': ObjectId(trailer_id)},
+    {
+        'title': request.form.get('title'),
+        'url': request.form.get('url'),
+        'quote': request.form.get('quote'),
+    })
+    return redirect(url_for('get_trailers'))
+
 
 if __name__ == '__main__':  
     app.run(host=os.getenv("IP", "0.0.0.0"),

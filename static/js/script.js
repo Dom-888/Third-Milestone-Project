@@ -12,7 +12,8 @@ function loadEditModal(trailer) {
     $('#modal-edit-trailer').modal("show");
     let trailerId = trailer.getAttribute("data-trailer-id");
     let complete_url = "/update_trailer/" + trailerId
-    $('#btn-update').attr("href", complete_url)
+    // let complete_url = "{{ url_for('update_trailer', trailer_id=trailerId) }}"
+    $('#modal-edit-trailer form').attr("action", complete_url)
     let trailerTitle = trailer.getAttribute("data-trailer-title");
     let trailerUrl = trailer.getAttribute("data-trailer-url");
     let trailerQuote = trailer.getAttribute("data-trailer-quote");

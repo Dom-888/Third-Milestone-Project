@@ -43,7 +43,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <!-- The href attribute of #btn-delete is filled by passTrailerId() in script.js -->
         <a href="" id="btn-delete" class="btn btn-danger">Delete</a>
       </div>
     </div>
@@ -61,7 +60,6 @@
           <span aria-hidden="true">&times;</span>
         </button>
 					</div>
-                    <!-- Il valore di action va scritto con passTrailerId con destinazione: update_trailer() -->
 					<form action="" method="POST">
 						<div class="modal-body">
 							<div class="container">
@@ -72,7 +70,7 @@
 						</div>
 						<div class="modal-footer">
 							<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-							<button class="btn btn-primary" type="submit">Save</button>
+							<button class="btn btn-primary" type="submit" name="action">Save</button>
                         </div>
 					</form>
 				</div>
