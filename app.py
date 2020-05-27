@@ -29,7 +29,7 @@ def get_trailers():
     inverted_coll = []
     for i in coll.find():
         inverted_coll.insert(0, i)
-    return render_template("index.html", docs = inverted_coll)
+    return render_template("index.html", trailers = inverted_coll)
 
 # Search page
 @app.route('/search_trailers', methods=['POST'])
@@ -37,7 +37,7 @@ def search_trailers():
     terms_to_search = request.form.get('user_search')
     coll.create_index([ ('title' , 'text')])
     results = coll.find({"$text": {"$search": terms_to_search}})
-    return render_template("search_results.html", results = results)
+    return render_template("index.html", trailers = results)
 
 # Add trailer
 @app.route('/insert_trailer', methods=['POST'])

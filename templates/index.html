@@ -13,20 +13,20 @@
 	</div>
 </div>
 
-{% for doc in docs %}
+{% for trailer in trailers %}
 <div class="col-12 col-md-6 col-xl-4">
 	<div class="card">
 		<div class="card-header">
-			<p class="movie-title">{{ doc.title }}</p>
-			<button type="button" class="btn" onclick="loadDeleteModal(this)" data-trailer-id="{{doc._id}}" data-trailer-title="{{doc.title}}"><i data-feather="trash-2"></i></button>
-			<button type="button" class="btn" onclick="loadEditModal(this)" data-trailer-id="{{doc._id}}" data-trailer-title="{{doc.title}}" data-trailer-url="{{doc.url}}" data-trailer-quote="{{doc.quote}}"><i data-feather="edit"></i></button>
+			<p class="movie-title">{{ trailer.title }}</p>
+			<button type="button" class="btn" onclick="loadDeleteModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}"><i data-feather="trash-2"></i></button>
+			<button type="button" class="btn" onclick="loadEditModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}" data-trailer-url="{{trailer.url}}" data-trailer-quote="{{trailer.quote}}"><i data-feather="edit"></i></button>
 		</div>
 		<div class="ytb-video-wrapper">
-			<iframe class="ytb-video" src="{{ doc.url }}" frameborder="0"
+			<iframe class="ytb-video" src="{{ trailer.url }}" frameborder="0"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 			</iframe>
 		</div>
-		<p>{{ doc.quote }}</p>
+		<p>{{ trailer.quote }}</p>
 	</div>
 </div>
 {% endfor %}
