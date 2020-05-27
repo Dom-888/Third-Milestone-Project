@@ -1,9 +1,12 @@
+/* Fonts imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
 
-/*---------------Background---------------*/
+/*---------------Background and font---------------*/
 
 body {
     background: url(../images/background-sm.jpg)#440D10 fixed left top;
     background-size: cover;
+    font-family: 'Roboto', helvetica, sans-serif;
 }
 
 /*---------------Bootstrap grid---------------*/
@@ -33,8 +36,10 @@ body {
 }
 
 
-.logo {
+#logo {
      width: 60px;
+     font-family: 'Josefin Sans', sans-serif;
+     font-weight: 700;
 }
 
 .searchbar {
@@ -45,17 +50,19 @@ body {
 
 .searchbar input {
     flex-grow: 1;
+    font-size: 18px;
 }
 
-.btn-add-trailer {
+#btn-add-trailer {
     float: right;
+    font-weight: 500;
+    font-size: 24px;
 }
 
 /*---------------Intro---------------*/
 
-
 .intro {
-
+    font-size: 18px;
 }
 
 /*---------------Cards---------------*/
@@ -63,13 +70,16 @@ body {
 .card {
     border: solid red;
     margin: 1vw;
+    
 }
 
 .card-header {
     /* overflow: auto; */
 }
 
-.movie-title {
+.card-title {
+    font-weight: 500;
+    font-size: 20px;
     vertical-align: middle;
     margin: auto;
     float: left;
@@ -79,18 +89,23 @@ body {
     float: right;
 }
 
-.ytb-video-wrapper {
+.card-video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
 }
 
-.ytb-video {
+.card-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.card-quote {
+    font-style: italic;
+    font-size: 18px;
 }
 
 /*---------------Modals---------------*/

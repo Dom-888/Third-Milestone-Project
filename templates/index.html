@@ -17,16 +17,16 @@
 <div class="col-12 col-md-6 col-xl-4">
 	<div class="card">
 		<div class="card-header">
-			<p class="movie-title">{{ trailer.title }}</p>
+			<p class="card-title">{{ trailer.title }}</p>
 			<button type="button" class="btn" onclick="loadDeleteModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}"><i data-feather="trash-2"></i></button>
 			<button type="button" class="btn" onclick="loadEditModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}" data-trailer-url="{{trailer.url}}" data-trailer-quote="{{trailer.quote}}"><i data-feather="edit"></i></button>
 		</div>
-		<div class="ytb-video-wrapper">
-			<iframe class="ytb-video" src="{{ trailer.url }}" frameborder="0"
+		<div class="card-video-wrapper">
+			<iframe class="card-video" src="{{ trailer.url }}" frameborder="0"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 			</iframe>
 		</div>
-		<p>{{ trailer.quote }}</p>
+		<p class="card-quote">{{ trailer.quote }}</p>
 	</div>
 </div>
 {% endfor %}
