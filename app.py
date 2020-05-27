@@ -36,7 +36,7 @@ def get_trailers():
 @app.route('/search_trailers', methods=['POST'])
 def search_trailers():
     terms_to_search = request.form.get('input-search')
-    search_results = coll.find({"title": {'$regex': terms_to_search}})
+    search_results = coll.find({"title": {'$regex': terms_to_search, '$options': '-i'}})
     reversed_search_results = []
     for doc in search_results:
         reversed_search_results.insert(0, doc)
