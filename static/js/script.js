@@ -9,11 +9,11 @@ function loadAddModal(trailer) {
 }
 
 function loadDeleteModal(trailer) {
-    $('#modal-delete-confirmation').modal("show")
+    $('#modal-delete-trailer').modal("show")
     let trailerId = trailer.getAttribute("data-trailer-id");
     $('#btn-delete').attr("href", "/delete_trailer/" + trailerId)
     let trailerTitle = trailer.getAttribute("data-trailer-title");
-    $('#modal-delete-confirmation .modal-title').text("Are you sure you want to delete " + trailerTitle + " from the database?")
+    $('#modal-delete-trailer .modal-title').text("Are you sure you want to delete " + trailerTitle + " from the database?")
 }
 
 function loadEditModal(trailer) { 
