@@ -25,8 +25,8 @@ def convert_url(url):
 
 # Display a limited number of trailers, for testing purpose only
 limited_coll = []
-for index, i in enumerate(coll.find()):
-    limited_coll.append(i)
+for index, doc in enumerate(coll.find()):
+    limited_coll.insert(0, doc)
     if index == 4:
         break
 

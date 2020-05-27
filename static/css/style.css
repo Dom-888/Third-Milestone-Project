@@ -13,7 +13,6 @@ body {
 
 .container-fluid{
     border: solid blue;
-    text-align: center;
 }
 
 .row {
@@ -63,6 +62,7 @@ body {
 
 .intro {
     font-size: 18px;
+    text-align: center;
 }
 
 /*---------------Cards---------------*/
@@ -75,21 +75,21 @@ body {
 }
 
 .card-header {
+    display: flex;
     padding: 0;
     margin: 0 0 20px;
 }
 
 .card-title {
+    flex-grow: 1;
     font-weight: 500;
     font-size: 20px;
     margin: 0;
-    float: left;
 }
 
 .btn-card {
     color: #f5f5f5;
     padding: 0 0 0 12px;
-    float: right;
 }
 
 .card-video-wrapper {
@@ -108,8 +108,10 @@ body {
 
 .card-quote {
     font-style: italic;
+    text-align: center;
     font-size: 18px;
     margin: 20px 0 0;
+    
 }
 
 /*---------------Modals---------------*/

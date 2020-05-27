@@ -18,8 +18,8 @@
 	<div class="card">
 		<div class="card-header">
 			<p class="card-title">{{ trailer.title }}</p>
-			<button type="button" class="btn btn-card" onclick="loadDeleteModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}"><i data-feather="trash-2"></i></button>
 			<button type="button" class="btn btn-card" onclick="loadEditModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}" data-trailer-url="{{trailer.url}}" data-trailer-quote="{{trailer.quote}}"><i data-feather="edit"></i></button>
+			<button type="button" class="btn btn-card" onclick="loadDeleteModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}"><i data-feather="trash-2"></i></button>
 		</div>
 		<div class="card-video-wrapper">
 			<iframe class="card-video" src="{{ trailer.url }}" frameborder="0"
