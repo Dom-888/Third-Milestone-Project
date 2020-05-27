@@ -11,17 +11,11 @@ body {
 
 /*---------------Bootstrap grid---------------*/
 
-.container-fluid{
-    border: solid blue;
-}
-
 .row {
-    border: solid purple;
-    padding: 0 4% 4%;
+    padding: 0 2% 2%;
 }
 
-.col,.col-12,.col-md-6,.col-xl-4{
-    /* border: solid transparent; */
+.col {
     padding: 0;
 }
 
