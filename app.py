@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import json
+import re
 
 if os.path.exists("env.py"):
     import env
@@ -27,17 +28,19 @@ def convert_url(url):
 @app.route('/get_trailers')
 def get_trailers():
     inverted_coll = []
-    for i in coll.find():
-        inverted_coll.insert(0, i)
+    for doc in coll.find():
+        inverted_coll.insert(0, doc)
     return render_template("index.html", trailers = inverted_coll)
 
-# Search page
+# Search trailers
 @app.route('/search_trailers', methods=['POST'])
 def search_trailers():
-    terms_to_search = request.form.get('user_search')
-    coll.create_index([ ('title' , 'text')])
-    results = coll.find({"$text": {"$search": terms_to_search}})
-    return render_template("index.html", trailers = results)
+    terms_to_search = request.form.get('input-search')
+    search_results = coll.find({"title": {'$regex': terms_to_search}})
+    reversed_search_results = []
+    for doc in search_results:
+        reversed_search_results.insert(0, doc)
+    return render_template("index.html", trailers = reversed_search_results)
 
 # Add trailer
 @app.route('/insert_trailer', methods=['POST'])
