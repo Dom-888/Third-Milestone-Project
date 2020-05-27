@@ -23,6 +23,13 @@ def convert_url(url):
     else:
         return url
 
+# Display a limited number of trailers, for testing purpose only
+limited_coll = []
+for index, i in enumerate(coll.find()):
+    limited_coll.append(i)
+    if index == 4:
+        break
+
 # Landing page
 @app.route('/') 
 @app.route('/get_trailers')
@@ -30,7 +37,7 @@ def get_trailers():
     reversed_coll = []
     for doc in coll.find():
         reversed_coll.insert(0, doc)
-    return render_template("index.html", trailers = reversed_coll)
+    return render_template("index.html", trailers = limited_coll)
 
 # Search trailers
 @app.route('/search_trailers', methods=['POST'])

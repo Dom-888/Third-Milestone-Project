@@ -68,24 +68,27 @@ body {
 /*---------------Cards---------------*/
 
 .card {
-    border: solid red;
+    color: #f5f5f5;
+    background-color: #2B2D2Ff2;
+    border: 20px solid #2B2D2Ff2;
     margin: 1vw;
-    
 }
 
 .card-header {
-    /* overflow: auto; */
+    padding: 0;
+    margin: 0 0 20px;
 }
 
 .card-title {
     font-weight: 500;
     font-size: 20px;
-    vertical-align: middle;
-    margin: auto;
+    margin: 0;
     float: left;
 }
 
-.card-header .btn {
+.btn-card {
+    color: #f5f5f5;
+    padding: 0 0 0 12px;
     float: right;
 }
 
@@ -106,6 +109,7 @@ body {
 .card-quote {
     font-style: italic;
     font-size: 18px;
+    margin: 20px 0 0;
 }
 
 /*---------------Modals---------------*/
