@@ -48,8 +48,13 @@ body {
 
 #btn-add-trailer {
     float: right;
+    color: #f5f5f5;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
+}
+
+#btn-add-trailer:hover {
+  color: #FC8A17;
 }
 
 /*---------------Intro---------------*/
@@ -90,10 +95,6 @@ body {
   color: #FC8A17;
 }
 
-.btn-card .feather {
-    stroke-width: 2.5;
-}
-
 .card-video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -123,14 +124,24 @@ body {
     margin-top: 15px;
 }
 
+/*---------------Feather icons---------------*/
+
+.feather {
+    stroke-width: 2.5;
+}
+
 /*---------------Laptop and desktop---------------*/
 
 @media only screen and (min-width: 1280px) and (orientation:landscape) {
     .row {
-        padding: 0 15% 4%;
+        padding: 0 15% 2%;
     }
     body {
         background-image: url(../images/background-lg.jpg);
         background-position: center;
+    }
+
+    #btn-add-trailer span {
+        display: inline !important;
     }
 }
