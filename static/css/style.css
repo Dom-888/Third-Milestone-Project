@@ -13,6 +13,7 @@ body {
 
 .row {
     padding: 0 2% 2%;
+    align-items: center;
 }
 
 .col {
@@ -27,7 +28,6 @@ body {
     /* height: 50px; */
     margin: calc(0.5vw + 10px);
 }
-
 
 #logo {
      width: 60px;
@@ -86,6 +86,14 @@ body {
     padding: 0 0 0 12px;
 }
 
+.btn-card:hover {
+  color: #FC8A17;
+}
+
+.btn-card .feather {
+    stroke-width: 2.5;
+}
+
 .card-video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -105,7 +113,6 @@ body {
     text-align: center;
     font-size: 18px;
     margin: 20px 0 0;
-    
 }
 
 /*---------------Modals---------------*/
@@ -115,7 +122,6 @@ body {
     width: 100%;
     margin-top: 15px;
 }
-
 
 /*---------------Laptop and desktop---------------*/
 
