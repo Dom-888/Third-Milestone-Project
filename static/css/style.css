@@ -36,14 +36,30 @@ body {
 }
 
 .searchbar {
-    flex-grow: 1;
-    border: solid gray;
+    background-color: #f5f5f5;
     display: flex;
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px;
+    padding-left: 8px;
 }
 
 .searchbar input {
-    flex-grow: 1;
     font-size: 18px;
+    background-color: transparent;
+    flex-grow: 1;
+    border: inherit;
+    border-radius: inherit;
+}
+
+#btn-search {
+    color:#999;
+    background-color: transparent;
+}
+
+#btn-search .feather {
+    width: 22px;
+    height: 22px;
 }
 
 #btn-add-trailer {
@@ -128,6 +144,19 @@ body {
 
 .feather {
     stroke-width: 2.5;
+}
+
+/*---------------Input fields---------------*/
+
+input {
+    font-size: 18px;
+}
+
+:focus { outline: none; }
+
+::placeholder {
+  color: #999;
+  opacity: 1;
 }
 
 /*---------------Laptop and desktop---------------*/
