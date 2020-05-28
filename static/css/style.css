@@ -1,5 +1,5 @@
 /* Fonts imported from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piedra&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
 
 /*---------------Background and font---------------*/
 
@@ -30,9 +30,19 @@ body {
 }
 
 #logo {
-     width: 60px;
-     font-family: 'Josefin Sans', sans-serif;
+     color: #000;
+     font-family: 'Piedra', cursive;
+     text-decoration: none;;
+     background-color: #FC8A17;
+     border-radius: 5px;
      font-weight: 700;
+}
+
+#logo h2 {
+    padding: 0 4px;
+    margin: 0;
+    position: relative;
+    top: 2px;
 }
 
 .searchbar {
