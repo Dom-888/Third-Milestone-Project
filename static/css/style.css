@@ -22,6 +22,14 @@ body {
 
 /*---------------Navbar---------------*/
 
+.nav-bg {
+    background-color: #000;
+    width: 100%;
+    height: 78px;
+    position: absolute;
+    z-index: -1;
+}
+
 .navbar {
     background-color: #000;
     display: flex;
