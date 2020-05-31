@@ -159,15 +159,21 @@ body {
 
 /*---------------Modals---------------*/
 
+.modal-header {
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .modal input {
     display: block;
     width: 100%;
     margin-top: 15px;
 }
 
-.modal-header {
-    font-size: 20px;
-    font-weight: 500;
+/* Overwrite default bootstrap modal setting to prevent background resizing on modal opening */
+.modal-open {
+    overflow: auto !important;
+    padding: 0 !important;
 }
 
 /*---------------Feather icons---------------*/
