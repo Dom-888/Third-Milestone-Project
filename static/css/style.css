@@ -101,7 +101,9 @@ body {
 .intro {
     font-size: 18px;
     text-align: center;
+    display: inline-block;
 }
+
 
 /*---------------Cards---------------*/
 
