@@ -60,7 +60,7 @@ body {
     border: none;
     border-radius: 5px;
     padding-left: 8px;
-    margin: auto 12px;
+    margin: auto 9px auto 12px;
 }
 
 .searchbar input {
