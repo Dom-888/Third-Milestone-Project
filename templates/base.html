@@ -29,11 +29,13 @@
 				<!-- Navbar -->
 				<div class="navbar">
                 <a href="{{url_for('get_trailers')}}" id="logo"><h2>OT</h2></a>
-					<form class="searchbar" id="search-form" action="{{ url_for('search_trailers') }}"
-						method="POST">
-						<input name="input-search" id="input-search-sm" type="text" size="1" placeholder="Search..">
-                        <input name="input-search" id="input-search-lg" type="text" size="1" placeholder="Search Trailer">
-						<button type="submit button" id="btn-search" class="btn"><i data-feather="search"></i></button>
+					<form class="searchbar small-vw" action="{{ url_for('search_trailers') }}" method="POST">
+						<input name="input-search" type="text" size="1" placeholder="Search..">
+                        <button type="submit button" class="btn btn-search"><i data-feather="search"></i></button>
+					</form>
+                    <form class="searchbar large-vw" action="{{ url_for('search_trailers') }}" method="POST">
+                        <input name="input-search" type="text" size="1" placeholder="Search Trailer">
+						<button type="submit button" class="btn btn-search"><i data-feather="search"></i></button>
 					</form>
 					<button type="button" id="btn-add-trailer" class="btn" onclick="loadAddModal(this)"><span class="d-none">Add Trailer </span><i data-feather="plus-square"></i></button>
 				</div>

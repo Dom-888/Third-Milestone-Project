@@ -71,16 +71,12 @@ body {
     border-radius: inherit;
 }
 
-#input-search-lg {
-    display: none;
-}
-
-#btn-search {
+.btn-search {
     color:#999;
     background-color: transparent;
 }
 
-#btn-search .feather {
+.btn-search .feather {
     width: 22px;
     height: 22px;
 }
@@ -195,8 +191,13 @@ input {
   opacity: 1;
 }
 
-/*---------------Laptop and desktop---------------*/
+/*---------------Responisive Design---------------*/
 
+.large-vw {
+    display: none;
+}
+
+/* Laptop and desktop view */
 @media only screen and (min-width: 1280px) and (orientation:landscape) {
     .row {
         padding: 0 15% 2%;
@@ -210,11 +211,11 @@ input {
         display: inline !important;
     }
 
-    #input-search-sm {
+    .small-vw {
         display: none;
     }
 
-    #input-search-lg {
-        display: inline-block;
+    .large-vw {
+        display: flex;
     }
 }
