@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div class="nav-bg"></div>
+	<div class="nav-bg"></div>
 
 	<div class="container-fluid">
 		<div class="row justify-content-center">
@@ -28,13 +28,15 @@
 
 				<!-- Navbar -->
 				<div class="navbar">
-                <a href="{{url_for('get_trailers')}}" id="logo"><h2>OT</h2></a>
-					<form class="searchbar small-vw" action="{{ url_for('search_trailers') }}" method="POST">
+					<a href="{{url_for('get_trailers')}}" id="logo">
+						<h2>OT</h2>
+					</a>
+					<form class="searchbar searchbar-sm" action="{{ url_for('search_trailers') }}" method="POST">
 						<input name="input-search" type="text" size="1" placeholder="Search..">
-                        <button type="submit button" class="btn btn-search"><i data-feather="search"></i></button>
+						<button type="submit button" class="btn btn-search"><i data-feather="search"></i></button>
 					</form>
-                    <form class="searchbar large-vw" action="{{ url_for('search_trailers') }}" method="POST">
-                        <input name="input-search" type="text" size="1" placeholder="Search Trailer">
+					<form class="searchbar searchbar-lg" action="{{ url_for('search_trailers') }}" method="POST">
+						<input name="input-search" type="text" size="1" placeholder="Search Trailer">
 						<button type="submit button" class="btn btn-search"><i data-feather="search"></i></button>
 					</form>
 					<button type="button" id="btn-add-trailer" class="btn" onclick="loadAddModal(this)"><span class="d-none">Add Trailer </span><i data-feather="plus-square"></i></button>
@@ -42,20 +44,35 @@
 
 			</div>
 
-			<!-- Cards -->
+			<!-- Site descriptions -->
+			<div class="col col-12">
+				<p class="intro intro-sm card">
+					Welcome to <strong>OpenTrailer</strong>, a community database of movie trailers.
+					You are free to Add, Watch, Modify and Delete the trailers on this website.<br>
+					Enjoy!
+	            </p>            
+				<p class="intro intro-lg card">
+					Welcome to <strong>OpenTrailer</strong>, a community database of movie trailers.
+					You are free to Add, Watch, Modify and Delete the trailers on this website.
+					If you want to contribute just click on the "Add trailer" and insert
+					the name of the movie, the <a href="static/images/how-to-url.gif" target="_blank">URL</a> of the
+					trailer and (if you want) your favorite quote from the movie.<br>
+		            Enjoy!
+	            </p>
+			</div>
+
+			<!--Trailer cards -->
 			{% block content %}
 			{% endblock %}
 
-		</div>
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="static/js/script.js"></script>
+		<!-- In case of multi-page layout: -->
+		<!-- <link href="{{ url_for('static', filename='js/script.js') }}" /> -->
 
-	<!-- Scripts -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<script src="static/js/script.js"></script>
-	<!-- In case of multi-page layout: -->
-	<!-- <link href="{{ url_for('static', filename='js/script.js') }}" /> -->
-    
 </body>
 
 </html>

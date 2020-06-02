@@ -193,7 +193,11 @@ input {
 
 /*---------------Responisive Design---------------*/
 
-.large-vw {
+.searchbar-lg {
+    display: none;
+}
+
+.intro-lg {
     display: none;
 }
 
@@ -211,11 +215,15 @@ input {
         display: inline !important;
     }
 
-    .small-vw {
+    .searchbar-sm,.intro-sm {
         display: none;
     }
 
-    .large-vw {
+    .searchbar-lg {
         display: flex;
+    }
+
+    .intro-lg {
+        display: block;
     }
 }

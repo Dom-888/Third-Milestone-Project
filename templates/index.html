@@ -1,16 +1,5 @@
 {% extends 'base.html' %} {% block content %}
 
-<!-- Welcome message -->
-<div class="col col-12">
-	<p class="intro card">
-		Welcome to <strong>OpenTrailer</strong>, a community database of movie trailers,
-		you are free to Add, Watch, Modify and Delete the trailers on this website.
-		If you want to contribute just click on the "Add trailer" and insert
-		the name of the movie, the <a href="static/images/how-to-url.gif" target="_blank">URL</a> of the trailer and (if you want) your favorite quote from the movie.<br>
-		Enjoy!
-	</p>
-</div>
-
 {% for trailer in trailers %}
 <div class="col col-12 col-md-6 col-xl-4">
 	<div class="card">
