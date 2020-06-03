@@ -147,8 +147,9 @@ body {
     color: #fff;
 }
 
-.btn-text {
+.btn-black {
     color: #f5f5f5;
+    background-color: #000;
     font-weight: 500;
     font-size: 20px;
     padding: 0;
@@ -169,6 +170,11 @@ body {
     height: 22px;
 }
 
+#loadMore {
+    width: 100%;
+    padding: 10px;
+}
+
 /* Increases the thickness of feather icons */
 .feather {
     stroke-width: 2.5;
@@ -187,7 +193,9 @@ input {
     border-radius: inherit;
 }
 
-:focus { outline: none; }
+:focus { 
+    outline: none;
+}
 
 ::placeholder {
   color: #999;
