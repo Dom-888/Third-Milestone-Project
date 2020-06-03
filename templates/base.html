@@ -28,25 +28,9 @@
 
 	<div class="container-fluid">
 		<div class="row justify-content-center">
-			<div class="col col-12">
 
-				<!-- Navbar -->
-				<div class="navbar">
-					<a href="{{url_for('get_trailers')}}" id="logo">
-						<h2>OT</h2>
-					</a>
-					<form class="searchbar searchbar-sm" action="{{ url_for('search_trailers') }}" method="POST">
-						<input name="input-search" type="text" size="1" placeholder="Search..">
-						<button type="submit button" class="btn btn-search"><i data-feather="search"></i></button>
-					</form>
-					<form class="searchbar searchbar-lg" action="{{ url_for('search_trailers') }}" method="POST">
-						<input name="input-search" type="text" size="1" placeholder="Search Trailer">
-						<button type="submit button" class="btn btn-search"><i data-feather="search"></i></button>
-					</form>
-					<button type="button" id="btn-add-trailer" class="btn btn-text" onclick="loadAddModal(this)"><span class="d-none">Add Trailer </span><i data-feather="plus-square"></i></button>
-				</div>
-
-			</div>
+			<!-- Navbar -->
+			{% include 'navbar.html' %}
 
 			<!-- Site descriptions -->
 			<div class="col col-12">
@@ -71,13 +55,14 @@
 
 			<!-- "Load more" button -->
 			<div class="col col-12 text-center">
-				<div id="loadMore" class="btn btn-text"><span>Load More </span><i data-feather="chevrons-down"></i></div>
+				<div id="loadMore" class="btn btn-text"><span>Load More </span><i data-feather="chevrons-down"></i>
+				</div>
 			</div>
-            
+
 		</div>
 	</div>
 
-    <!-- Modals -->
+	<!-- Modals -->
 	{% include 'modals.html' %}
 
 	<!-- Scripts -->
