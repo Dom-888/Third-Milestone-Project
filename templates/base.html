@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 	<!-- Meta data -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,7 @@
 	<!-- Style sheets -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" href="static/css/style.css" />
-	<!-- In case of multi-page layout: -->
-	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
 
 	<!-- Page title -->
 	<title>Document</title>
@@ -28,12 +27,12 @@
 
 	<div class="container-fluid">
 		<div class="row justify-content-center">
-            
+
 			<!-- Navbar -->
 			{% include 'navbar.html' %}
 
 			<!-- Site descriptions -->
-            {% include 'intro.html' %}
+			{% include 'intro.html' %}
 
 			<!--Trailer cards -->
 			{% block content %}
@@ -55,9 +54,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<script src="static/js/script.js"></script>
-	<!-- In case of multi-page layout: -->
-	<!-- <link href="{{ url_for('static', filename='js/script.js') }}" /> -->
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 
