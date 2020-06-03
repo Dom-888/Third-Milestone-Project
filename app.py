@@ -4,6 +4,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import json
 import re
+import string
 
 if os.path.exists("env.py"):
     import env
@@ -54,7 +55,7 @@ def search_trailers():
 @app.route('/insert_trailer', methods=['POST'])
 def insert_trailer():
     form_trailer = request.form.to_dict()
-    form_trailer["title"] = form_trailer["title"].title()
+    form_trailer["title"] = string.capwords(form_trailer["title"])
     form_trailer["url"] = convert_url(form_trailer["url"])
     coll.insert_one(form_trailer)
     return redirect(url_for('get_trailers'))
@@ -70,7 +71,7 @@ def delete_trailer(trailer_id):
 def update_trailer(trailer_id):
     coll.update({'_id': ObjectId(trailer_id)},
     {
-        'title': request.form.get('title').title(),
+        'title': string.capwords(request.form.get('title')),
         'url': convert_url(request.form.get('url')),
         'quote': request.form.get('quote'),
     })
