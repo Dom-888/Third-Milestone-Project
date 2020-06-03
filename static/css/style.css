@@ -62,35 +62,6 @@ body {
     margin: auto 9px auto 12px;
 }
 
-.searchbar input {
-    font-size: 18px;
-    background-color: transparent;
-    flex-grow: 1;
-    border: inherit;
-    border-radius: inherit;
-}
-
-.btn-search {
-    color:#999;
-    background-color: transparent;
-}
-
-.btn-search .feather {
-    width: 22px;
-    height: 22px;
-}
-
-#btn-add-trailer {
-    color: #f5f5f5;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 0;
-}
-
-#btn-add-trailer:hover {
-  color: #FC8A17;
-}
-
 /*---------------Site description---------------*/
 
 .intro {
@@ -124,15 +95,6 @@ body {
     font-weight: 500;
     font-size: 20px;
     margin: 0;
-}
-
-.btn-card {
-    color: #f5f5f5;
-    padding: 0 0 0 12px;
-}
-
-.btn-card:hover {
-  color: #FC8A17;
 }
 
 .card-video-wrapper {
@@ -175,8 +137,35 @@ body {
     padding: 0 !important;
 }
 
-/*---------------Feather icons---------------*/
+/*---------------Buttons---------------*/
 
+.btn:hover {
+  color: #FC8A17 !important;
+}
+
+.btn-text {
+    color: #f5f5f5;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0;
+}
+
+.btn-card {
+    color: #f5f5f5;
+    padding: 0 0 0 12px;
+}
+
+.btn-search {
+    color:#999;
+    background-color: transparent;
+}
+
+.btn-search .feather {
+    width: 22px;
+    height: 22px;
+}
+
+/* Increases the thickness of feather icons */
 .feather {
     stroke-width: 2.5;
 }
@@ -187,6 +176,13 @@ input {
     font-size: 18px;
 }
 
+.searchbar input {
+    background-color: transparent;
+    flex-grow: 1;
+    border: inherit;
+    border-radius: inherit;
+}
+
 :focus { outline: none; }
 
 ::placeholder {
@@ -194,7 +190,7 @@ input {
   opacity: 1;
 }
 
-/*---------------Responisive Design---------------*/
+/*---------------Responsive Design---------------*/
 
 /* Content intended for large viewports is hidden by default */
 .searchbar-lg,.intro-lg {
