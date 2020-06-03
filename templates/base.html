@@ -28,26 +28,12 @@
 
 	<div class="container-fluid">
 		<div class="row justify-content-center">
-
+            
 			<!-- Navbar -->
 			{% include 'navbar.html' %}
 
 			<!-- Site descriptions -->
-			<div class="col col-12">
-				<p class="intro intro-sm card">
-					Welcome to <strong>OpenTrailer</strong>, a community database of movie trailers.
-					You are free to Add, Watch, Modify and Delete the trailers on this website.<br>
-					Enjoy!
-	            </p>
-					<p class="intro intro-lg card">
-						Welcome to <strong>OpenTrailer</strong>, a community database of movie trailers.
-						You are free to Add, Watch, Modify and Delete the trailers on this website.
-						If you want to contribute just click on the "Add trailer" and insert
-						the name of the movie, the <a href="static/images/how-to-url.gif" target="_blank">URL</a> of the
-						trailer and (if you want) your favorite quote from the movie.<br>
-		            Enjoy!
-	            </p>
-			</div>
+            {% include 'intro.html' %}
 
 			<!--Trailer cards -->
 			{% block content %}
