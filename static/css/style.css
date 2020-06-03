@@ -139,8 +139,12 @@ body {
 
 /*---------------Buttons---------------*/
 
-.btn:hover :not(.modal) {
-  color: #FC8A17;
+.btn:hover {
+    color: #FC8A17;
+}
+
+.modal .btn:hover {
+    color: #fff;
 }
 
 .btn-text {
