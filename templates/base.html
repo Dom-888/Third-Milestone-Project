@@ -20,6 +20,11 @@
 </head>
 
 <body>
+
+	<!-- Contains the total number of trailers on the page (hidden or not). 
+    This number is used in JS to determine whether the "Load more" button should be hidden -->
+	<p id="nOfTrailers" class="d-none">{{ n_of_trailers }}</p>
+
 	<div class="nav-bg"></div>
 
 	<div class="container-fluid">
@@ -50,13 +55,13 @@
 					Welcome to <strong>OpenTrailer</strong>, a community database of movie trailers.
 					You are free to Add, Watch, Modify and Delete the trailers on this website.<br>
 					Enjoy!
-	            </p>            
-				<p class="intro intro-lg card">
-					Welcome to <strong>OpenTrailer</strong>, a community database of movie trailers.
-					You are free to Add, Watch, Modify and Delete the trailers on this website.
-					If you want to contribute just click on the "Add trailer" and insert
-					the name of the movie, the <a href="static/images/how-to-url.gif" target="_blank">URL</a> of the
-					trailer and (if you want) your favorite quote from the movie.<br>
+	            </p>
+					<p class="intro intro-lg card">
+						Welcome to <strong>OpenTrailer</strong>, a community database of movie trailers.
+						You are free to Add, Watch, Modify and Delete the trailers on this website.
+						If you want to contribute just click on the "Add trailer" and insert
+						the name of the movie, the <a href="static/images/how-to-url.gif" target="_blank">URL</a> of the
+						trailer and (if you want) your favorite quote from the movie.<br>
 		            Enjoy!
 	            </p>
 			</div>
@@ -65,17 +70,24 @@
 			{% block content %}
 			{% endblock %}
 
-        </div>
+		</div>
 
-        {% include 'modals.html' %}
+		<!-- "Load more" button -->
+		<div class="col col-12 text-center">
+			<div id="loadMore" class="btn bg-white">Load More</div>
+		</div>
 
-		<!-- Scripts -->
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="static/js/script.js"></script>
-		<!-- In case of multi-page layout: -->
-		<!-- <link href="{{ url_for('static', filename='js/script.js') }}" /> -->
+	</div>
+
+	{% include 'modals.html' %}
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="static/js/script.js"></script>
+	<!-- In case of multi-page layout: -->
+	<!-- <link href="{{ url_for('static', filename='js/script.js') }}" /> -->
 
 </body>
 

@@ -1,7 +1,20 @@
+// Load the first 12 trailers in the database
+let trailersOnPage = 12;
+$('.trailer:lt(' + trailersOnPage + ')').show();
+
+// "Load more" button which loads 12 more trailers with each press
+$('#loadMore').click(function () {
+    trailersOnPage += 12;
+    $('.trailer:lt(' + trailersOnPage + ')').show();
+    
+    // Hide the button if all trailers have been loaded
+    if (trailersOnPage >= $('#nOfTrailers').text()) {$('#loadMore').hide();};
+});
+
 // Replace all elements that have a data-feather attribute with a Feather icon
 feather.replace()
 
-function loadAddModal(trailer) {
+function loadAddModal() {
     $('#modal-add-edit-trailer').modal("show");
     $('#modal-add-edit-trailer form').attr("action", "/insert_trailer");
     $('#modal-add-edit-trailer .modal-title').text("Add a new Trailer")
