@@ -63,7 +63,7 @@ def delete_trailer(trailer_id):
 # Update trailer
 @app.route('/update_trailer/<trailer_id>', methods=["POST"])
 def update_trailer(trailer_id):
-    coll.update({'_id': ObjectId(trailer_id)},
+    coll.replace_one({'_id': ObjectId(trailer_id)},
     {
         'title': string.capwords(request.form.get('title')),
         'url': convert_url(request.form.get('url')),
