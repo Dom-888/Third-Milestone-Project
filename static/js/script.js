@@ -52,6 +52,6 @@ $("#title,#quote").keyup(function () {
     nChar = $(this).val().length;
     maxChar = $(this).attr('maxlength');
     if ( nChar == maxChar) { $(this).next().show().text("Maximum number of characters reached! ("+ maxChar +")"); }
-    if ( nChar < maxChar) { $(this).next().hide(); };
+    else { $(this).next().hide(); };
 });
 
