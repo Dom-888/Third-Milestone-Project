@@ -12,7 +12,7 @@ body {
 /*---------------Bootstrap grid---------------*/
 
 .row {
-    padding: 0 2% 4%;
+    padding: 0 2% calc(2% + 10px);
     align-items: center;
 }
 
