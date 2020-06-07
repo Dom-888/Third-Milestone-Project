@@ -13,7 +13,7 @@ $('#loadMore').click(function () {
 // Hide the button if all trailers have been loaded
 function hideLoadMoreButton() {
     let n = $('#nOfTrailers').text();
-    if (trailersOnPage >= n ) {$('#loadMore').hide();};
+    if (trailersOnPage >= n) { $('#loadMore').hide(); };
 }
 
 // Replace all elements that have a data-feather attribute with a Feather icon
@@ -34,15 +34,24 @@ function loadDeleteModal(trailer) {
     $('#modal-delete-trailer .modal-title').text("Are you sure you want to delete " + trailerTitle + " from the database?")
 }
 
-function loadEditModal(trailer) { 
+function loadEditModal(trailer) {
     $('#modal-add-edit-trailer').modal("show");
     let trailerId = trailer.getAttribute("data-trailer-id");
     $('#modal-add-edit-trailer form').attr("action", "/update_trailer/" + trailerId);
     let trailerTitle = trailer.getAttribute("data-trailer-title");
     let trailerUrl = trailer.getAttribute("data-trailer-url");
     let trailerQuote = trailer.getAttribute("data-trailer-quote");
-    $('#modal-add-edit-trailer .modal-title').text("Modify "+ trailerTitle)
+    $('#modal-add-edit-trailer .modal-title').text("Modify " + trailerTitle)
     $('#title').attr("value", trailerTitle)
     $('#url').attr("value", trailerUrl)
     $('#quote').attr("value", trailerQuote)
 }
+
+// Check if the user has reached the maximum number of characters in the modal input fields, if so, show an alert message
+$("#title,#quote").keyup(function () {
+    nChar = $(this).val().length;
+    maxChar = $(this).attr('maxlength');
+    if ( nChar == maxChar) { $(this).next().show().text("Maximum number of characters reached! ("+ maxChar +")"); }
+    if ( nChar < maxChar) { $(this).next().hide(); };
+});
+

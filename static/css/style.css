@@ -141,6 +141,12 @@ body {
     padding: 0 !important;
 }
 
+/* Messages that appear if the user reaches the maximum number of characters in the modal input */
+.max-length-msg {
+    display: none;
+    color: red;
+}
+
 /*---------------Buttons---------------*/
 
 .btn:hover {
