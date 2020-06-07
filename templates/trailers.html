@@ -1,6 +1,9 @@
 {% extends 'base.html' %} 
 {% block content %}
 
+<!-- Contains the total number of trailers on the page (hidden or not). This number is used by hideLoadMoreButton() in script.js -->
+<p id="nOfTrailers" class="d-none">{{ n_trailers }}</p>
+
 {% for trailer in trailers %}
 <div class="col col-12 col-md-6 col-xl-4">
 	<div class="trailer card">

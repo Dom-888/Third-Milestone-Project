@@ -36,7 +36,7 @@ def get_trailers():
     reversed_coll = []
     for doc in coll.find():
         reversed_coll.insert(0, doc)
-    return render_template("trailers.html", trailers = reversed_coll, n_of_trailers = len(reversed_coll))
+    return render_template("trailers.html", trailers = reversed_coll, n_trailers = len(reversed_coll))
 
 # Search trailers
 @app.route('/search_trailers', methods=['POST'])
@@ -46,7 +46,7 @@ def search_trailers():
     reversed_search_results = []
     for doc in search_results:
         reversed_search_results.insert(0, doc)
-    return render_template("trailers.html", trailers = reversed_search_results, n_of_trailers = len(reversed_search_results))
+    return render_template("trailers.html", trailers = reversed_search_results, n_trailers = len(reversed_search_results))
 
 # Add trailer
 @app.route('/insert_trailer', methods=['POST'])
