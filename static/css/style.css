@@ -39,6 +39,7 @@ body {
 #logo {
      color: #000;
      font-family: 'Piedra', cursive;
+     text-decoration: none;
      background-color: #FC8A17;
      border-radius: 5px;
      font-weight: 700;
@@ -67,6 +68,10 @@ body {
     font-size: 18px;
     text-align: center;
     display: inline-block;
+}
+
+.intro a {
+   color: #FC8A17;
 }
 
 /* The card layout is used both for the site description and for trailers */
