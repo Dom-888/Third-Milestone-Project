@@ -7,13 +7,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="An open database for movie trailers">
+	<meta name="description" content="An open database for movie trailers">
 	<meta name="keywords" content="Movies, Films, Trailers, Cinema">
 	<meta name="author" content="Domenico Spinella">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
 
 	<!-- Style sheets -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
@@ -32,23 +34,26 @@
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 
-            <header>
-	    		<!-- Navbar -->
-                {% include 'navbar.html' %}
+			<header>
+				<!-- Navbar -->
+				{% include 'navbar.html' %}
 
-                <!-- Site descriptions -->
-                {% include 'intro.html' %}
-            </header>
+				<!-- Site descriptions -->
+				{% include 'intro.html' %}
+			</header>
 
 			<!--Trailer cards -->
 			{% block content %}
 			{% endblock %}
 
-			<!-- "Load more" button -->
+			<!-- Load-more button -->
 			<div class="col col-12 text-center">
 				<div id="loadMore" class="btn btn-black">Load More <i data-feather="chevrons-down"></i>
 				</div>
 			</div>
+
+            <!-- Scroll-to-top button -->
+			<button id="toTopBtn" class="btn" title="Return to top"><i data-feather="chevron-up" alt="Return to top button"></button>
 
 		</div>
 	</div>
