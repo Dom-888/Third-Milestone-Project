@@ -6,7 +6,7 @@
 
 {% for trailer in trailers %}
 <div class="col col-12 col-md-6 col-xl-4">
-	<div class="trailer card">
+	<section class="trailer card">
 		<div class="card-header">
 			<p class="card-title">{{ trailer.title }}</p>
 			<button type="button" class="btn btn-card" onclick="loadEditModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}" data-trailer-url="{{trailer.url}}" data-trailer-quote="{{trailer.quote}}"><i data-feather="edit" alt="Edit icon"></i></button>
@@ -18,7 +18,7 @@
 			</iframe>
 		</div>
 		<p class="card-quote">{{ trailer.quote }}</p>
-	</div>
+	</section>
 </div>
 {% endfor %}
 
