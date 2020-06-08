@@ -1,13 +1,13 @@
 // Load the first 12 trailers in the database
 let trailersOnPage = 12;
 $('.trailer:lt(' + trailersOnPage + ')').show();
-hideLoadMoreButton()
+hideLoadMoreButton();
 
 // "Load more" button which loads 12 more trailers with each press
 $('#loadMore').click(function () {
     trailersOnPage += 12;
     $('.trailer:lt(' + trailersOnPage + ')').show();
-    hideLoadMoreButton()
+    hideLoadMoreButton();
 });
 
 // Hide the button if all trailers have been loaded
@@ -17,35 +17,29 @@ function hideLoadMoreButton() {
 }
 
 // Replace all elements that have a data-feather attribute with a Feather icon
-feather.replace()
+feather.replace();
 
+// Add-Trailer Modal
 function loadAddModal() {
+    $('#modal-add-edit-trailer input').val(""); // Clear input fields
     $('#modal-add-edit-trailer').modal("show");
     $('#modal-add-edit-trailer form').attr("action", "/insert_trailer");
-    $('#modal-add-edit-trailer .modal-title').text("Add a new Trailer")
-    $('#modal-add-edit-trailer input').val("")
+    $('#modal-add-edit-trailer .modal-title').text("Add a new Trailer");
 }
 
-function loadDeleteModal(trailer) {
-    $('#modal-delete-trailer').modal("show")
-    let trailerId = trailer.getAttribute("data-trailer-id");
-    $('#btn-delete').attr("href", "/delete_trailer/" + trailerId)
-    let trailerTitle = trailer.getAttribute("data-trailer-title");
-    $('#modal-delete-trailer .modal-title').text("Are you sure you want to delete " + trailerTitle + " from the database?")
-}
-
+// Edit-Trailer Modal
 function loadEditModal(trailer) {
-    $('#modal-add-edit-trailer').modal("show");
     let trailerId = trailer.getAttribute("data-trailer-id");
-    $('#modal-add-edit-trailer form').attr("action", "/update_trailer/" + trailerId);
     let trailerTitle = trailer.getAttribute("data-trailer-title");
     let trailerUrl = trailer.getAttribute("data-trailer-url");
     let trailerQuote = trailer.getAttribute("data-trailer-quote");
-    $('#modal-add-edit-trailer .modal-title').text("Modify " + trailerTitle)
-    $('#title').val(trailerTitle)
-    $('#url').val(trailerUrl)
-    $('#quote').val(trailerQuote)
-}
+    $('#modal-add-edit-trailer').modal("show");
+    $('#modal-add-edit-trailer form').attr("action", "/update_trailer/" + trailerId);
+    $('#modal-add-edit-trailer .modal-title').text("Modify " + trailerTitle);
+    $('#title').val(trailerTitle);
+    $('#url').val(trailerUrl);
+    $('#quote').val(trailerQuote);
+};
 
 // Check if the user has reached the maximum number of characters in the modal input fields, if so, show an alert message
 $("#title,#quote").keyup(function () {
@@ -54,4 +48,14 @@ $("#title,#quote").keyup(function () {
     if (nChar == maxChar) { $(this).next().show().text("Maximum number of characters reached! (" + maxChar + ")"); }
     else { $(this).next().hide(); };
 });
+
+// Delete-Trailer Modal
+function loadDeleteModal(trailer) {
+    let trailerId = trailer.getAttribute("data-trailer-id");
+    let trailerTitle = trailer.getAttribute("data-trailer-title");
+    $('#modal-delete-trailer').modal("show");
+    $('#btn-delete').attr("href", "/delete_trailer/" + trailerId);
+    $('#modal-delete-trailer .modal-title').text("Are you sure you want to delete " + trailerTitle + " from the database?");
+};
+
 
