@@ -49,8 +49,8 @@ function loadEditModal(trailer) {
 
 // Check if the user has reached the maximum number of characters in the modal input fields, if so, show an alert message
 $("#title,#quote").keyup(function () {
-    nChar = $(this).val().length;
-    maxChar = $(this).attr('maxlength');
+    let nChar = $(this).val().length;
+    let maxChar = $(this).attr('maxlength');
     if ( nChar == maxChar) { $(this).next().show().text("Maximum number of characters reached! ("+ maxChar +")"); }
     else { $(this).next().hide(); };
 });
