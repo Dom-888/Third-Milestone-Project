@@ -1,12 +1,17 @@
+/*---------------Fonts---------------*/
+
 /* Fonts imported from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Piedra&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
 
-/*---------------Background and font---------------*/
-
 body {
+    font-family: 'Roboto', helvetica, sans-serif;
+}
+
+/*---------------Background---------------*/
+
+.background-img {
     background: url(../images/background-sm.jpg)#440D10 fixed left top;
     background-size: cover;
-    font-family: 'Roboto', helvetica, sans-serif;
 }
 
 /*---------------Bootstrap grid---------------*/
@@ -212,6 +217,11 @@ input {
   opacity: 1;
 }
 
+/*---------------404 page---------------*/
+
+
+
+
 /*---------------Responsive Design---------------*/
 
 /* Content intended for large viewports is hidden by default */
@@ -221,14 +231,14 @@ input {
 
 /* Laptop and desktop view */
 @media only screen and (min-width: 1280px) and (orientation:landscape) {
-    
-    .row {
-        padding: 0 15% 2%;
-    }
 
-    body {
+    .background-img {
         background-image: url(../images/background-lg.jpg);
         background-position: center;
+    }
+
+    .row {
+        padding: 0 15% 2%;
     }
 
     #btn-add-trailer span {
