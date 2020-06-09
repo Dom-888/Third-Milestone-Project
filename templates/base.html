@@ -48,7 +48,7 @@
 
 			<!-- Load-more button -->
 			<div class="col col-12 text-center">
-				<div id="btn-load-more" class="btn btn-text btn-white">Load More <i data-feather="chevrons-down"></i>
+				<div id="btn-load-more" class="btn btn-text btn-white" onclick="loadMoreTrailer()">Load More <i data-feather="chevrons-down"></i>
 				</div>
 			</div>
 
@@ -59,7 +59,7 @@
 	{% include 'modals.html' %}
 
     <!-- Scroll-to-top button -->
-	<button id="btn-to-top" class="btn btn-white" title="Return to top"><i data-feather="chevron-up" alt="Return to top button"></button>
+	<button id="btn-to-top" class="btn btn-white" onclick="returnToTop()" title="Return to top"><i data-feather="chevron-up" alt="Return to top button"></button>
 
 
 	<!-- Scripts -->

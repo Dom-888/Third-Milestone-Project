@@ -3,12 +3,12 @@ let trailersOnPage = 12;
 $('.trailer:lt(' + trailersOnPage + ')').show();
 hideLoadMoreButton();
 
-// "Load more" button which loads 12 more trailers with each press
-$('#btn-load-more').click(function () {
+// When the user clicks on the load-more button, load 12 more trailers 
+function loadMoreTrailer() {
     trailersOnPage += 12;
     $('.trailer:lt(' + trailersOnPage + ')').show();
     hideLoadMoreButton();
-});
+}
 
 // Hide the button if all trailers have been loaded
 function hideLoadMoreButton() {
@@ -58,7 +58,7 @@ function loadDeleteModal(trailer) {
     $('#modal-delete-trailer .modal-title').text("Are you sure you want to delete " + trailerTitle + " from the database?");
 };
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 20px from the top of the document, show the return-to-top button
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -69,7 +69,7 @@ function scrollFunction() {
     }
 }
 
-//  When the user clicks on the button, scroll to the top of the document
-$('#btn-to-top').click(function () {
+//  When the user clicks on the return-to-top button, scroll to the top of the document
+function returnToTop() {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
-});
+}
