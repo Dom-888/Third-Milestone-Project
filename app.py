@@ -29,20 +29,15 @@ def convert_url(url):
 @app.route('/') 
 @app.route('/get_trailers')
 def get_trailers():
-    reversed_coll = []
-    for doc in coll.find():
-        reversed_coll.insert(0, doc)
-    return render_template("trailers.html", trailers = reversed_coll, n_trailers = len(reversed_coll))
+    return render_template("trailers.html", trailers = coll.find().sort([( '$natural', -1 )] ), n_trailers = coll.count_documents({}))
 
 # Search trailers
 @app.route('/search_trailers', methods=['POST'])
 def search_trailers():
     terms_to_search = request.form.get('input-search')
     search_results = coll.find({"title": {'$regex': terms_to_search, '$options': '-i'}})
-    reversed_search_results = []
-    for doc in search_results:
-        reversed_search_results.insert(0, doc)
-    return render_template("trailers.html", trailers = reversed_search_results, n_trailers = len(reversed_search_results))
+    n_search_results = coll.count_documents({"title": {'$regex': terms_to_search, '$options': '-i'}})
+    return render_template("trailers.html", trailers = search_results.sort([( '$natural', -1 )] ), n_trailers = n_search_results)
 
 # Add trailer
 @app.route('/insert_trailer', methods=['POST'])
