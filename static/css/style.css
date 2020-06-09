@@ -79,18 +79,18 @@ body {
    color: #FC8A17;
 }
 
-/* The card layout is used both for the site description and for trailers */
+/*---------------Trailers---------------*/
+
+/* Trailers are hidden by default and are gradually shown by js functions */
+.trailer {
+    display: none;
+}
+
 .card {
     color: #f5f5f5;
     background-color: #2B2D2Ff2;
     border: 20px solid #2B2D2Ff2;
     margin: calc(0.5vw + 10px);
-}
-
-/*---------------Trailers---------------*/
-
-.trailer {
-    display: none;
 }
 
 .card-header {
@@ -106,6 +106,7 @@ body {
     margin: 0;
 }
 
+/* Wrapper that make the video responsive, credit to: https://css-tricks.com/fluid-width-video/ */
 .card-video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */

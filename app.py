@@ -15,15 +15,12 @@ app.config["MONGO_URI"] = os.getenv("connection_string")
 # Assign the database collection to the variable "coll"
 coll = PyMongo(app).db.trailers 
 
-# Convert Youtube URL into their embedded versions
+# Convert Youtube URLs into their embedded versions
 def convert_url(url):
-    
-    # Shorten the url in case the user copies the video URL at current time
-    if url[:24] == "https://www.youtube.com/":
+    if url[:24] == "https://www.youtube.com/": 
         url = url[:43] 
     elif url[:17] == "https://youtu.be/":
         url = url[:28]
-        
     video_id = url[-11:]
     embedded_url = "https://www.youtube.com/embed/" + video_id
     return embedded_url
@@ -77,7 +74,6 @@ def update_trailer(trailer_id):
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
 
 
 if __name__ == '__main__':  

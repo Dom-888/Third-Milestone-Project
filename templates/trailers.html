@@ -4,6 +4,7 @@
 <!-- Contains the total number of trailers on the page (hidden or not). This number is used by hideLoadMoreButton() in script.js -->
 <p id="nOfTrailers" class="d-none">{{ n_trailers }}</p>
 
+<!-- Iterare through the trailer collection and display each one of them inside a bootstrap card -->
 {% for trailer in trailers %}
 <div class="col col-12 col-md-6 col-xl-4">
 	<section class="trailer card">

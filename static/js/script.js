@@ -1,3 +1,5 @@
+/*---------------Trailer cards---------------*/
+
 // Load the first 12 trailers in the database
 let trailersOnPage = 12;
 $('.trailer:lt(' + trailersOnPage + ')').show();
@@ -16,10 +18,9 @@ function hideLoadMoreButton() {
     if (trailersOnPage >= n) { $('#btn-load-more').hide(); };
 }
 
-// Replace all elements that have a data-feather attribute with a Feather icon
-feather.replace();
+/*---------------Modals---------------*/
 
-// Add-Trailer Modal
+// Add-trailer mModal
 function loadAddModal() {
     $('#modal-add-edit-trailer input').val(""); // Clear input fields
     $('#modal-add-edit-trailer').modal("show");
@@ -27,7 +28,7 @@ function loadAddModal() {
     $('#modal-add-edit-trailer .modal-title').text("Add a new Trailer");
 }
 
-// Edit-Trailer Modal
+// Edit-trailer modal
 function loadEditModal(trailer) {
     let trailerId = trailer.getAttribute("data-trailer-id");
     let trailerTitle = trailer.getAttribute("data-trailer-title");
@@ -49,7 +50,7 @@ $("#title,#quote").keyup(function () {
     else { $(this).next().hide(); };
 });
 
-// Delete-Trailer Modal
+// Delete-trailer modal
 function loadDeleteModal(trailer) {
     let trailerId = trailer.getAttribute("data-trailer-id");
     let trailerTitle = trailer.getAttribute("data-trailer-title");
@@ -57,6 +58,8 @@ function loadDeleteModal(trailer) {
     $('#btn-delete').attr("href", "/delete_trailer/" + trailerId);
     $('#modal-delete-trailer .modal-title').text("Are you sure you want to delete " + trailerTitle + " from the database?");
 };
+
+/*---------------Return to top---------------*/
 
 // When the user scrolls down 20px from the top of the document, show the return-to-top button
 window.onscroll = function () { scrollFunction() };
@@ -73,3 +76,8 @@ function scrollFunction() {
 function returnToTop() {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
 }
+
+/*---------------Feather icons---------------*/
+
+// Replace all elements that have a data-feather attribute with a Feather icon
+feather.replace();
