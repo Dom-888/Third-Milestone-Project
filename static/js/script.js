@@ -4,7 +4,7 @@ $('.trailer:lt(' + trailersOnPage + ')').show();
 hideLoadMoreButton();
 
 // "Load more" button which loads 12 more trailers with each press
-$('#loadMore').click(function () {
+$('#btn-load-more').click(function () {
     trailersOnPage += 12;
     $('.trailer:lt(' + trailersOnPage + ')').show();
     hideLoadMoreButton();
@@ -13,7 +13,7 @@ $('#loadMore').click(function () {
 // Hide the button if all trailers have been loaded
 function hideLoadMoreButton() {
     let n = $('#nOfTrailers').text();
-    if (trailersOnPage >= n) { $('#loadMore').hide(); };
+    if (trailersOnPage >= n) { $('#btn-load-more').hide(); };
 }
 
 // Replace all elements that have a data-feather attribute with a Feather icon
@@ -63,13 +63,13 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        $("#toTopBtn").show();
+        $("#btn-to-top").show();
     } else {
-        $("#toTopBtn").hide();
+        $("#btn-to-top").hide();
     }
 }
 
 //  When the user clicks on the button, scroll to the top of the document
-$('#toTopBtn').click(function () {
+$('#btn-to-top').click(function () {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
 });

@@ -64,7 +64,7 @@ body {
     border: none;
     border-radius: 5px;
     padding-left: 8px;
-    margin: auto 9px auto 12px;
+    margin: auto 1px auto 12px;
 }
 
 /*---------------Site description---------------*/
@@ -154,53 +154,52 @@ body {
 
 /*---------------Buttons---------------*/
 
-.btn:hover {
-    color: #FC8A17;
-}
-
-.modal .btn:hover {
-    color: #fff;
-}
-
-.btn-black {
+.btn-white {
     color: #f5f5f5;
+}
+
+.btn-white:hover {
+    color: #FC8A17 !important;
+}
+
+.btn-text {
     background-color: #000;
-    font-weight: 500;
     font-size: 20px;
+    font-weight: 500;
+    padding: 6px 8px;
+}
+
+/* #btn-add-trailer {
     padding: 0;
 }
 
+#btn-load-more,#btn-return-home {
+    
+} */
+
+#btn-return-home {
+    margin: 15px;
+}
+
 .btn-card {
-    color: #f5f5f5;
     padding: 0 0 0 12px;
 }
 
-.btn-search {
+#btn-search {
     color:#999;
     background-color: transparent;
 }
 
-.btn-search .feather {
+#btn-search .feather {
     width: 22px;
     height: 22px;
 }
 
-#loadMore {
-    width: 100%;
-    padding: 10px;
-}
-
-#returnHome {
-    padding: 6px 8px;
-    margin: 15px;
-}
-
-#toTopBtn {
+#btn-to-top {
     display: none; 
     position: fixed; 
     bottom: 20px; 
-    right: 30px; 
-    color: #f5f5f5;; 
+    right: 30px;  
     background-color: #000000f2; 
     border: solid 4px #f5f5f5;; 
     outline: none; 
@@ -208,12 +207,11 @@ body {
     border-radius: 100%;
 }
 
-#toTopBtn:hover {
-    color: #FC8A17;
+#btn-to-top:hover {
     border-color: #FC8A17;
 }
 
-#toTopBtn .feather {
+#btn-to-top .feather {
     width: 50px;
     height: 50px;
 }

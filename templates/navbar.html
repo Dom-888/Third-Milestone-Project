@@ -11,9 +11,9 @@
 		</form>
 		<form class="searchbar searchbar-lg" action="{{ url_for('search_trailers') }}" method="POST">
 			<input name="input-search" type="text" size="1" placeholder="Search Trailer">
-			<button type="submit button" class="btn btn-search"><i data-feather="search"></i></button>
+			<button type="submit button" id="btn-search" class="btn"><i data-feather="search"></i></button>
 		</form>
-		<button type="button" id="btn-add-trailer" class="btn btn-black" onclick="loadAddModal(this)"><span class="d-none">Add Trailer </span><i data-feather="plus-square"></i></button>
+		<button type="button" id="btn-add-trailer" class="btn btn-text btn-white" onclick="loadAddModal(this)"><span class="d-none">Add Trailer </span><i data-feather="plus-square"></i></button>
 	</div>
 </div>
 
