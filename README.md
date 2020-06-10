@@ -168,7 +168,7 @@ The input fields present in the modal are the following:
 - [Figma](https://www.figma.com/) for wireframing.
 - [Favicon](https://favicon.io/) to create the favicon.
 - [BrowserStack](https://www.browserstack.com/) to test multiple devices and browsers.
-- [Am I Responsive?](http://ami.responsivedesign.is/) to take the [screenshot](#[open-trailer]) placed at the beginning of this document. 
+- [Am I Responsive?](http://ami.responsivedesign.is/) to take the [screenshot](#open-trailer) placed at the beginning of this document. 
 
 #### Software
 - [Paint.net](https://www.getpaint.net/) to create the 404 Image.
