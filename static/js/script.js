@@ -20,7 +20,7 @@ function hideLoadMoreButton() {
 
 /*---------------Modals---------------*/
 
-// Add-trailer mModal
+// Add-trailer modal
 function loadAddModal() {
     $('#modal-add-edit-trailer input').val(""); // Clear input fields
     $('#modal-add-edit-trailer').modal("show");
