@@ -2,7 +2,7 @@
 
 An open database for movie trailers.
 
-# --> Image here <--
+!["Responsive Representation"](static/images/responsive-representation.png "Responsive Representation")
 
 ## Table of Contents
 1. [**UX**](#ux)
@@ -136,12 +136,52 @@ The input fields present in the modal are the following:
 ### Removed Features
 
 ## Technologies Used
+  
+#### Languages  
+- [HTML5](https://devdocs.io/html/)
+- [CSS3](https://devdocs.io/css/) 
+- [JavaScript](https://devdocs.io/javascript/)
+- [Python](https://www.python.org/)
+
+#### Libraries
+- [JQuery](https://jquery.com) to simplify DOM manipulation.  
+- [Jinja](https://palletsprojects.com/p/jinja/) to transfer data from the back-end to the front-end of the project.
+- [PyMongo](https://api.mongodb.com/python/current/tutorial.html) to allow Python to communicate with MongoDB.
+- [Google Fonts](https://fonts.google.com/) to import the fonts used on the website.  
+- [Feather Icons](https://feathericons.com/) to import the icons used on the website.  
+
+#### Frameworks  
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) to construct and render pages.
+- [Bootstrap](https://getbootstrap.com/) to create the responsive design, in particular the grid and the modals.  
+
+#### Services
+- [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed.  
+- [Git](https://git-scm.com/) for version control during the development process.  
+- [GitHub](https://github.com/) to host the project in a remote repository.  
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) hosts the database used in this project.
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) to test responsiveness and quickly debug code.  
+- [HTML Validator](https://validator.w3.org/) to test the HTML code.  
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) to test the CSS code.  
+- [JSHint](https://jshint.com/) to test the JavaScript code.  
+- [Autoprefixer](https://autoprefixer.github.io/) to add prefixes in the CSS for cross-browser support.  
+- [Python syntax checker](https://extendsclass.com/python-tester.html) to test the Python code.
+- [Figma](https://www.figma.com/) for wireframing.
+- [Favicon](https://favicon.io/) to create the favicon.
+- [BrowserStack](https://www.browserstack.com/) to test multiple devices and browsers.
+- [Am I Responsive?](http://ami.responsivedesign.is/) to take the [screenshot](#[open-trailer]) placed at the beginning of this document. 
+
+#### Software
+- [Paint.net](https://www.getpaint.net/) to create the 404 Image.
+- [Gif Screen Recorder](http://gifrecorder.com/) to create the how-to-url.gif.
+- [Visual Studio Code](https://code.visualstudio.com/) for testing snippet of JS code.
+- [Spyder](https://www.spyder-ide.org/) for testing snippet of Python code.  
 
 ## Testing
 
 ### Tested Devices
+### Simulated Devices
 ### Laptop Testing
-### Smartphone Testing
+### Smartphone and Tablet Testing
 ### Validation Services
 ### Bugs Discovered
 
