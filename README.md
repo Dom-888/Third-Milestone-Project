@@ -67,21 +67,23 @@ Open Trailer meets these needs by:
 
 ### User Stories  
 
-### Design Choices  
+### Design Choices  
 
-- **Fonts**  
-All fonts are from [Google Fonts](https://fonts.google.com/).  
-    - _Roboto_: Site main font, it was chosen for its clear and straight design.  
-    - _Piedra_: Used to create the logo, it was chosen for its uniqueness.
+- **Fonts**  
+All fonts are from [Google Fonts](https://fonts.google.com/).  
+    - _Roboto_: Site main font, it was chosen for its clear and straight design.  
+    - _Piedra_: Used to create the logo, it was chosen for its uniqueness.
 
-- **Icons**  
-All icons are from [Feather Icons](https://feathericons.com/).  
-    - _CRUD Operations_: Icons are used to manage database operations with easily recognizable images often used on sites of this type. For example the magnifying glass for "search" and the trash can for "delete".
-	- _Navigations Buttons_: Icons have also been added to navigation buttons as a visual clue to facilitate site navigation.
-  
-- **Colors**  
+- **Icons**  
+All icons are from [Feather Icons](https://feathericons.com/).  
+    - _CRUD Operations_: Icons are used to manage database operations, with easily recognizable images often used on sites of this type. For example the magnifying glass for "search" and the trash can for "delete".
+	- _Navigations Buttons_: Icons have also been added to navigation buttons as visual clues to facilitate site navigation.
+  
+- **Colors**  
 Since the site is a collection of trailers, it mainly uses dull colors in order to emphasize the trailer previews. 
-    - _Off-Black (#2B2D2F)_: Used as the background color for the trailer cards.
-    - _Off-White (#f5f5f5)_: Used as the main text color.
-	-_LIght Gray (#999)_: Used for input placeholders and icons.
-    -_Bright Orange (#D35400)_: The only bright color, is used to highlight key elements such as the logo and the buttons when the user hovers them with the mouse.  
+    - _Off-Black (#2B2D2F)_: Used as background color for the trailer cards.
+    - _Off-White (#f5f5f5)_: Used as main text color.
+    - _LIght gray (#999)_: Used for input placeholders and icons.
+    - _Bright Orange (#D35400)_: The only bright color, is used to highlight key elements such as the logo and the buttons when the user hovers them with the mouse.  
+
+## Features
