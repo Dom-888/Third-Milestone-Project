@@ -86,6 +86,10 @@ Since the site is a collection of trailers, it mainly uses dull colors in order 
 - _LIght gray (#999)_: Used for input placeholders and icons.
 - _Bright Orange (#D35400)_: The only bright color, is used to highlight key elements such as the logo and the buttons when the user hovers them with the mouse.  
 
+### Wireframes  
+  
+The wireframes were created using [Figma](https://www.figma.com/) and can be found [here](https://www.figma.com/file/Zy7VgngJfOWds4nafWafJI/Third-Milestone-Project?node-id=0%3A1).
+
 ## Features
 
 ### Existing Features  
@@ -126,3 +130,27 @@ The input fields present in the modal are the following:
 #### 404 Page
 - _Customized 404 Message_: The '0' in 404 is replaced with a film reel image, in keeping with the rest of the site.
 - _Return-to-home Button_: The only interactive element of this page.
+
+### Features Left to Implement
+
+### Removed Features
+
+## Technologies Used
+
+## Testing
+
+### Tested Devices
+### Laptop Testing
+### Smartphone Testing
+### Validation Services
+### Bugs Discovered
+
+## Deployment
+### How to run this project locally
+
+## Credits
+### Code
+### Media
+### Acknowledgments
+
+## Disclaimer
