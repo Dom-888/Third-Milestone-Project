@@ -30,7 +30,7 @@ body {
 .nav-bg {
     background-color: #000;
     width: 100%;
-    height: 78px;
+    height: 88px;
     position: absolute;
     z-index: -1;
 }
