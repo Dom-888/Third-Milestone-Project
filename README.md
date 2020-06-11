@@ -310,3 +310,5 @@ To get the MONGO_URI read the point 8 of the [**previous section**](#how-to-run-
 - This project takes inspiration from [IMDb](https://www.imdb.com/).
 
 ## Disclaimer
+
+The content of this website is provided for educational purposes only.
