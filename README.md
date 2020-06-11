@@ -15,7 +15,6 @@ An open database for movie trailers.
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
     - [**Features Left to Implement**](#features-left-to-implement)
-    - [**Removed Features**](#removed-features)
 
 3. [**Technologies Used**](#technologies-used)
 
@@ -143,7 +142,11 @@ The input fields present in the modal are the following:
 
 ### Features Left to Implement
 
-### Removed Features
+#### Multiplatform Support
+At present it is only possible to upload videos from Youtube, the next step is to add support to the other 2 major video hosting platforms: Vimeo and Dailymotion.
+
+##### Category Search
+Give the user the possibility to add the film genre to the trailer files in order to make the search by category possible.
 
 ## Technologies Used
   
