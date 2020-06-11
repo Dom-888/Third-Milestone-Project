@@ -29,6 +29,7 @@ An open database for movie trailers.
 
 6. [**Deployment**](#deployment)
     - [**How to run this project locally**](#how-to-run-this-project-locally)
+    - [**Heroku Deployment**](#heroku-deployment)
 
 7. [**Credits**](#credits)
     - [**Code**](#code)
@@ -158,6 +159,7 @@ The input fields present in the modal are the following:
 - [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed.  
 - [Git](https://git-scm.com/) for version control during the development process.  
 - [GitHub](https://github.com/) to host the project in a remote repository.  
+- [Heroku](https://dashboard.heroku.com/apps) to deploy the project.  
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) hosts the database used in this project.
 - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) to test responsiveness and quickly debug code.  
 - [HTML Validator](https://validator.w3.org/) to test the HTML code.  
@@ -189,7 +191,7 @@ The input fields present in the modal are the following:
 
 ### How to run this project locally
 
-1. Save a copy of the [GitPod](https://www.gitpod.io/) repository located at https://github.com/Dom-888/Third-Milestone-Project by clicking the on "Clone or download ▼", then "Download ZIP" and extracting the zip file to your chosen folder. 
+1. Save a copy of the [GitHub](https://github.com/) repository located at https://github.com/Dom-888/Third-Milestone-Project by clicking the on "Clone or download ▼", then "Download ZIP" and extracting the zip file to your chosen folder. 
 Alternatively, if you have [Git](https://git-scm.com/) installed on your system, you can clone the repository with the following command:
 ```
 git clone https://github.com/Dom-888/Third-Milestone-Project
@@ -245,6 +247,47 @@ python app.py
 ```
 
 12. You can visit the website at `http://127.0.0.1:5000`
+
+## Heroku Deployment
+
+To deploy the project on heroku, take the following steps:
+
+1. If not already present, create a requirements.txt file using the command:
+
+```
+pip freeze > requirements.txt
+```
+
+2. If not already present, create a `Procfile` with the command:
+
+```
+echo web: python app.py > Procfile
+```
+
+3. Push the the project to GitHub.
+
+4. Create a new app on the [Heroku website](https://dashboard.heroku.com/apps) by clicking the "New" button in your dashboard. Give it a name and set the region to the one closest to you, then click the "Create app" button.
+
+5. From the heroku dashboard of your newly created application, click on "Settings" -> "Reveal Config Vars" and set the following config variabless:
+
+```
+|---------------------------------|
+| Key               | Value       |
+|------------------ |-------------|
+| connection_string | <MONGO_URI> |
+| DEBUG             | FALSE       |
+| IP                | 0.0.0.0     |
+| PORT              | 5000        |
+|---------------------------------|
+```
+
+To get the MONGO_URI read the point 8 of the [**previous section**](#how-to-run-this-project-locally).
+
+6. Click on "Deploy" -> "Deployment method" and select GitHub. Select the correct repository and click "Connect".
+
+7. In the "Manual Deployment" section of this page, make sure the master branch is selected and then click "Deploy Branch".
+
+8. The site is now successfully deployed, click the "Open app" button to visit it.
 
 ## Credits
 ### Code
