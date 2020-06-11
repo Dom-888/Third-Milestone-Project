@@ -20,8 +20,7 @@ An open database for movie trailers.
 
 4. [**Testing**](#testing)
     - [**Tested Devices**](#tested-devices)
-    - [**Laptop Testing**](#laptop-testing)
-    - [**Smartphone Testing**](#smartphone-testing)
+    - [**Manual Testing**](#manual-testing)
     - [**Validation Services**](#validation-services)
     - [**Bugs Discovered**](#bugs-discovered)
 
@@ -194,7 +193,7 @@ Give the user the ability to add the movie genre to the trailer files in order t
 
 ### Tested Devices
 ### Simulated Devices
-### Laptop Testing  
+### Manual Testing  
 
 1. **Navbar**
 - Hover on each button, confirm the hover effect works as expected. 
@@ -215,7 +214,7 @@ Give the user the ability to add the movie genre to the trailer files in order t
  
 3. **Trailer Cards**
 - Hover on each button, confirm the hover effect works as expected. 
-- Confirm that the trailer cards are arranged in columns of 2 or 3, depending on the size of the window.
+- Confirm that the trailer cards are arranged in columns of 1 to 3, depending on the size of the window.
 - Confirm that the trailer cards are displayed in order from newest to oldest.
 - Confirm that none of the 3 elements of the card (title, video and quote) overflow from it.
 - Click the _Edit-Trailer button_, confirm it shows the _Edit-Trailer_ modal.
@@ -272,8 +271,6 @@ Give the user the ability to add the movie genre to the trailer files in order t
 - Verify that message 404 and the _Return Home_ button are displayed correctly.
 - Hover on the _Return Home_ button, confirm the hover effect works as expected.
 - Click the _Return Home_ button, confirm it takes the user to the home page.
-
-### Smartphone and Tablet Testing
 
 ### Validation Services  
 The following validation services were used to check the validity of the website code.  
