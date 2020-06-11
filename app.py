@@ -15,7 +15,18 @@ app.config["MONGO_URI"] = os.getenv("connection_string")
 # Assign the database collection to the variable "coll"
 coll = PyMongo(app).db.trailers 
 
-# Convert Youtube URLs into their embedded versions
+"""
+Convert standard Youtube URLs into their embedded versions,
+accept one of the following format:
+- https://www.youtube.com/watch?v=G_sskTsokZ0
+- https://www.youtube.com/watch?v=G_sskTsokZ0&feature=youtu.be
+- https://www.youtube.com/embed/G_sskTsokZ0
+- https://youtu.be/G_sskTsokZ0
+- https://youtu.be/G_sskTsokZ0?t=15
+- http://y2u.be/G_sskTsokZ0
+And return this:
+- https://www.youtube.com/embed/G_sskTsokZ0
+"""
 def convert_url(url):
     if url[:24] == "https://www.youtube.com/": 
         url = url[:43] 
