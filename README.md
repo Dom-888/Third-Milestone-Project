@@ -62,7 +62,7 @@ Open Trailer meets these needs by:
 - Improve the ability to create responsive design websites through the mobile-first approach.  
 - Improve the ability to make a website interactive using JavaScript and jQuery.  
 - Learn how to create and handle NoSQL databases.
-- Learn how to connect a database to websites using Python and Flask.  
+- Learn how to connect a database to a website using Python and Flask.  
 - Add a functional and visually attractive website to the developer portfolio.
 
 ### User Stories  
@@ -96,7 +96,7 @@ The wireframes were created using [Figma](https://www.figma.com/) and can be fou
 
 #### Navbar
 - _Website Logo_: If clicked, it takes the user back to the home page.
-- _Search Bar_: Allows the user to search the database using movie titles as a search key.  
+- _Search Bar_: Allows the user to search the database using movie titles as search keys.  
 - _Add-trailer Button_: Manage the "Create" operation by loading the appropriate modal, The button text disappears if the user accesses the site from a smartphone in order to leave more space for the search bar.
 
 #### Site Description
@@ -116,7 +116,7 @@ The "Create" and "Update" operations are managed by the same modal whose attribu
 - _Consistency_: Since the two modals are almost identical, the user only needs to learn once to manage both operations (Create and Update).
 
 The input fields present in the modal are the following:
-- _Movie Title_: All the words of the inserted text are capitalized by the string.capwords() python method, returning an appropriate format for a movie title. This field can contain a maximum of 85 characters, and a message warns the user if the maximum number of characters has been reached.
+- _Movie Title_: All the words of the inserted text are capitalized by the `string.capwords()` python method, returning an appropriate format for a movie title. This field can contain a maximum of 85 characters, and a message warns the user if the maximum number of characters has been reached.
 - _Youtube URL_: The text entered in this field is validated to check that it has the structure of a youtube URL (non-Youtube URL are rejected). It's also automatically converted into its "embedded" version by a custom python function in order to be ready to be played on the trailer card.
 - _Movie Quote_: The only field that can be left empty. It can contain a maximum of 170 characters, as for the title field, a message warns the user if the maximum number of characters has been reached.
 
@@ -186,7 +186,65 @@ The input fields present in the modal are the following:
 ### Bugs Discovered
 
 ## Deployment
+
 ### How to run this project locally
+
+1. Save a copy of the [GitPod](https://www.gitpod.io/) repository located at https://github.com/Dom-888/Third-Milestone-Project by clicking the on "Clone or download ▼", then "Download ZIP" and extracting the zip file to your chosen folder. 
+Alternatively, if you have [Git](https://git-scm.com/) installed on your system, you can clone the repository with the following command:
+```
+git clone https://github.com/Dom-888/Third-Milestone-Project
+```
+
+2. If possible open a terminal session in the unzip folder or cd to the correct location.
+
+3. A virtual environment is recommended for the Python interpreter (Note that your python commands may differ, check the [Python Documentation on virtual environments]https://docs.python.org/3/library/venv.html) for further instructions).
+Enter the command:
+```
+python -m .venv venv
+```
+4. Activate the .venv with the command:
+
+```
+venv\Scripts\activate 
+```
+
+5. If needed, upgrade pip locally with:
+```
+pip install --upgrade pip.
+```
+
+6. Install all required modules with the command:
+```
+pip -r requirements.txt.
+```
+
+7. Create your own database on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) or MongoDB running locally on your machine. Call the database "openTrailers", with a collection called "trailers". I also suggest creating a few documents for testing purposes.
+
+8. Now you need the MONGO_URI to connect the repository to the database, to find the it on [Atlas](https://www.mongodb.com/cloud/atlas) click on "Cluster" -> "Connect" -> "Connect your application"; Here chose the lastest version of Python, you will get a link like the following:
+
+```
+mongodb+srv://my_username:<password>@my_cluster-1hvju.mongodb.net/<dbname>?retryWrites=true&w=majority
+```
+
+Replace <password> with your Atlas password and <dbname> with "openTrailer".
+
+9. In your local IDE create a file called `env.py`.
+
+10. Inside the env.py file import os, create a "conection_string" variable and assign it to the MONGO_URI.
+The final content of your env.py should look like this:
+
+```
+import os
+
+os.environ["connection_string"] = "mongodb+srv://my_username:<password>@my_cluster-1hvju.mongodb.net/<dbname>?retryWrites=true&w=majority" 
+````
+
+11. You can now run the application with the command:
+```
+python app.py
+```
+
+12. You can visit the website at `http://127.0.0.1:5000`
 
 ## Credits
 ### Code
