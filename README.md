@@ -20,9 +20,12 @@ An open database for movie trailers.
 
 4. [**Testing**](#testing)
     - [**Tested Devices**](#tested-devices)
+    - [**Simulated Devices**](#simulated-devices)
     - [**Manual Testing**](#manual-testing)
     - [**Validation Services**](#validation-services)
     - [**Bugs Discovered**](#bugs-discovered)
+
+### 
 
 6. [**Deployment**](#deployment)
     - [**How to run this project locally**](#how-to-run-this-project-locally)
@@ -192,7 +195,38 @@ Give the user the ability to add the movie genre to the trailer files in order t
 ## Testing
 
 ### Tested Devices
+
+The website has been successfully tested with the following devices: 
+  
+```  
+| -----------|---------------------------- |------------------------------|  
+| Type       | Device                      | Browsers                     |  
+| -----------|---------------------------- |------------------------------|  
+| Laptop     | Asus FX753VD                | Chrome, Firefox, Edge, Opera |  
+| Smartphone | Lenovo Moto G5S Plus        | Chrome, Firefox              |  
+| Laptop     | Thinkpad E450               | Firefox                      |  
+| Smartphone | Samsung Galaxy A50          | Firefox Focus                |  
+| Laptop     | Acer Aspire E15             | Chrome                       |  
+| Smartphone | Asus ZenFone 4 Max          | Chrome                       |  
+| -----------|---------------------------- |------------------------------|  
+```  
+
 ### Simulated Devices
+
+[BrowserStack](https://www.browserstack.com/): was used to test the project on the following simulated devices:
+
+```  
+| -----------|---------------------------- |----------|  
+| Type       | Device                      | Browsers |       
+| -----------|---------------------------- |----------|  
+| Smartphone | Galaxy Note 9               | Chrome   |  
+| Tablet     | Galaxy Tab S6               | Chrome   |  
+| Smartphone | iPhone 11                   | Safari   |  
+| Tablet     | iPad Pro 11                 | Safari   |  
+| Tablet     | iPad Air 2                  | Safari   |  
+| -----------|---------------------------- |----------|  
+```  
+
 ### Manual Testing  
 
 1. **Navbar**
