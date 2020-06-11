@@ -18,7 +18,9 @@ body {
 
 .row {
     padding: 0 2% calc(2% + 10px);
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .col {
@@ -37,6 +39,8 @@ body {
 
 .navbar {
     background-color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: calc(0.5vw + 10px)
 }
@@ -59,8 +63,12 @@ body {
 
 .searchbar {
     background-color: #f5f5f5;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     border: none;
     border-radius: 5px;
     padding-left: 8px;
@@ -104,13 +112,17 @@ body {
 }
 
 .card-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
     margin: 0 0 20px;
 }
 
 .card-title {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     font-weight: 500;
     font-size: 20px;
     margin: 0;
@@ -238,13 +250,35 @@ input {
 
 .searchbar input {
     background-color: transparent;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     border: inherit;
     border-radius: inherit;
 }
 
 :focus { 
     outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
 }
 
 ::placeholder {
@@ -259,20 +293,27 @@ input {
 }
 
 .wrapper-404 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100vh;
 }
 
 .container-404 {
     text-align: center;
-    align-self: center;
-    flex: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     padding: 15px;
     margin-bottom: 10vh;
 }
 
 .container-404 img { 
-    object-fit: scale-down;
+    -o-object-fit: scale-down; 
+       object-fit: scale-down;
     max-width: 70%;
 }
 
@@ -293,6 +334,8 @@ input {
     }
 
     .searchbar-lg {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
