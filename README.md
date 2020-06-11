@@ -177,8 +177,8 @@ Give the user the ability to add the movie genre to the trailer files in order t
 - [HTML Validator](https://validator.w3.org/) to test the HTML code.  
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) to test the CSS code.  
 - [JSHint](https://jshint.com/) to test the JavaScript code.  
-- [Autoprefixer](https://autoprefixer.github.io/) to add prefixes in the CSS for cross-browser support.  
 - [Python syntax checker](https://extendsclass.com/python-tester.html) to test the Python code.
+- [Autoprefixer](https://autoprefixer.github.io/) to add prefixes in the CSS for cross-browser support.  
 - [Figma](https://www.figma.com/) for wireframing.
 - [Favicon](https://favicon.io/) to create the favicon.
 - [BrowserStack](https://www.browserstack.com/) to test multiple devices and browsers.
@@ -274,7 +274,14 @@ Give the user the ability to add the movie genre to the trailer files in order t
 - Click the _Return Home_ button, confirm it takes the user to the home page.
 
 ### Smartphone and Tablet Testing
-### Validation Services
+
+### Validation Services  
+The following validation services were used to check the validity of the website code.  
+- [HTML Validator](https://validator.w3.org/) was used to test the HTML code.  
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.  
+- [JSHint](https://jshint.com/) was used to test the JavaScript code.  
+- [Python syntax checker](https://extendsclass.com/python-tester.html) was used to test the Python code.
+
 ### Bugs Discovered
 
 ## Deployment
