@@ -10,8 +10,8 @@
 	<section class="trailer card">
 		<div class="card-header">
 			<p class="card-title">{{ trailer.title }}</p>
-			<button type="button" class="btn btn-card btn-white" onclick="loadEditModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}" data-trailer-url="{{trailer.url}}" data-trailer-quote="{{trailer.quote}}"><i data-feather="edit" alt="Edit icon"></i></button>
-			<button type="button" class="btn btn-card btn-white" onclick="loadDeleteModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}"><i data-feather="trash-2" alt="Trash can icon"></i></button>
+			<button type="button" class="btn btn-card btn-white" onclick="loadEditModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}" data-trailer-url="{{trailer.url}}" data-trailer-quote="{{trailer.quote}}"><i data-feather="edit" title="Edit icon"></i></button>
+			<button type="button" class="btn btn-card btn-white" onclick="loadDeleteModal(this)" data-trailer-id="{{trailer._id}}" data-trailer-title="{{trailer.title}}"><i data-feather="trash-2" title="Trash can icon"></i></button>
 		</div>
 		<div class="card-video-wrapper">
 			<iframe class="card-video" src="{{ trailer.url }}" frameborder="0"
