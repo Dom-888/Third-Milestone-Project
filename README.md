@@ -194,7 +194,85 @@ Give the user the possibility to add the film genre to the trailer files in orde
 
 ### Tested Devices
 ### Simulated Devices
-### Laptop Testing
+### Laptop Testing  
+
+1. **Navbar**
+- Hover on each button, confirm the hover effect works as expected. 
+- Click the site logo, confirm it takes the user to the home page.
+- Click the _Add-Trailer button_, confirm it show the _Add-Trailer_ modal.
+
+
+1.1 **Search Bar**
+- Type one or more words and press enter, confirm that the search results are consistent with the input entered.
+- Type one or more words and click the _Magnifying glass button_, confirm that the search results are consistent with the input entered.
+- Repeat the previous steps with different character combinations.
+
+
+2. **Site Description**
+- Hover the _Youtube URL_, confirm the hover effect works as expected. 
+- Click the _Youtube URL_, confirm it open the gif image in a new tab.
+
+ 
+3. **Trailer Cards**
+- Hover on each button, confirm the hover effect works as expected. 
+- Confirm that the trailer cards are arranged in columns of 2 or 3, depending on the size of the window.
+- Confirm that the trailer cards are displayed in order from newest to oldest.
+- Confirm that none of the 3 elements of the card (title, video and quote) overflow from it.
+- Click the _Edit-Trailer button_, confirm it shows the _Edit-Trailer_ modal.
+- Click the _Delete-Trailer button_, confirm it shows the _Delete-Trailer_ modal.
+	
+
+4. **Add-Trailer Modal**
+- Hover on each button, confirm the hover effect works as expected. 
+- Confirm that the background of the site does not resize by opening and closing the modal.
+- Confirm that the modal header show "Add a new Trailer"
+- Confirm that the inputs are empty and show the appropriate placeholders.
+- Repeat the previous 2 steps after editing a trailer.
+- Type one or more words in the _Movie Title_ input field, confirm that the first letter of each word is capitalized.
+- Try to type more than 85 characters in the _Movie Title_ input field, confirm that a message is displayed warning that the maximum number of characters has been reached.
+- Enter a valid Youtube URL in the _Youtube URL_ field, save the trailer and reopen it with the _Edit-Trailer Modal_, confirm that the URL has been converted to embedded.
+- Enter an invalid Youtube URL in the _Youtube URL_ field and click the _Save button_, confirm that it is rejected.
+- Try to type more than 170 characters in the _Movie Quote_ input field, confirm that a message is displayed warning that the maximum number of characters has been reached.
+- Click the _Save button_ without filling in the _Movie Title_ or the _Youtube URL_ fields, confirm that those fields cannot be left empty.
+- Click the _Save button_ with all mandatory fields filled in, confirm that a new trailer is being created.
+
+4. **Edit-Trailer Modal**
+- Hover on each button, confirm the hover effect works as expected. 
+- Confirm that the background of the site does not resize by opening and closing the modal.
+- Confirm that the modal header show "Modify <movie title>"
+- Confirm that the inputs are empty and show the appropriate texts.
+- Repeat the previous 2 steps after creating a new trailer.
+- Add one or more words in the _Movie Title_ input field, confirm that the first letter of each word is capitalized.
+- Try to type more than 85 characters in the _Movie Title_ input field, confirm that a message is displayed warning that the maximum number of characters has been reached.
+- Replace the URL in the _Youtube URL_ field with another valid Youtube URL, save the trailer and reopen the modal, confirm that the new URL has been converted to embedded.
+- Replace the URL in the _Youtube URL_ field with an invalid Youtube URL and click the _Save button_, confirm that it is rejected.
+- Try to type more than 170 characters in the _Movie Quote_ input field, confirm that a message is displayed warning that the maximum number of characters has been reached.
+- Click the _Save button_ without filling in the _Movie Title_ or the _Youtube URL_ fields, confirm that those fields cannot be left empty.
+- Click the _Save button_ with all mandatory fields filled in, confirm that the changes made are saved.
+	
+
+5. **Delete-Trailer Modal**
+- Hover on each button, confirm the hover effect works as expected. 
+- Confirm that the background of the site does not resize by opening and closing the modal.
+- Click the _Delete Button_, confirm that the trailer is actually deleted.
+
+6. **Return-to-top Button**
+- Confirm that the _to-top button_ is not visible when the user is at the top of the page. 
+- Confirm that the button appears when the user scrolls down the page.
+- Confirm that as the user scrolls the button remains in the same place on the screen. 
+- Click the button, confirm the user is taken smoothly back up to the top of the page. 
+- Confirm that when back up at the top of the page, the button disappears. 
+	
+7. **Load-more Button**
+- Click the button, confirm that 12 (or less) trailers are loaded.
+- Confirm that the _Load-more Button_ is not visible when all trailers have been loaded.
+
+8. **404 Page
+- Enter a deliberately incorrect URL in the address bar, confirm it takes the user to page 404.
+- Verify that message 404 and the _Return Home_ button are displayed correctly.
+- Hover on the _Return Home_ button, confirm the hover effect works as expected.
+- Click the _Return Home_ button, confirm it takes the user to the home page.
+
 ### Smartphone and Tablet Testing
 ### Validation Services
 ### Bugs Discovered
