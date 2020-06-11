@@ -6,7 +6,6 @@ An open database for movie trailers.
 
 ## Table of Contents
 1. [**UX**](#ux)
-    - [**Project Goals**](#project-goals)
     - [**User Goals**](#user-goals)
     - [**Developer Goals**](#developer-goals)
     - [**User Stories**](#user-stories)
@@ -42,31 +41,41 @@ An open database for movie trailers.
 
 ### User Goals
 
-The main target audience for Open Trailer are english speaking people with a passion for movies.
+The main target audience for Open Trailer are English speaking people with a passion for movies.
 
 User goals are:
 
-- Find a new movie to watch.
-- Rediscover a movie that I had forgotten.
-- Share my favorite movies with people with my same passion.
+- Find new movies to watch.
+- Create new trailers of my favorite movies.
 - Update trailers already present in the database by adding a quote or choosing a higher quality video.
 - Eliminate incorrect or offensive content.
+- Intuitively understand how to use the site.
+- Use the site from my smartphone as well as my tablet and my laptop.
 
 Open Trailer meets these needs by:
 
 - Allowing the user to easily browse the database, by searching for a movie title or simply scrolling down the page.
 - Being easy to use, as the operations of creating, modifying, and eliminating are all handled in a very similar way so that the user has to learn how to do it only once.
 - Having a clear and elegant user interface that allows a smooth navigation flow.
+- Being fully responsive.
 
 ### Developer Goals
 
 - Improve the ability to create responsive design websites through the mobile-first approach.  
 - Improve the ability to make a website interactive using JavaScript and jQuery.  
 - Learn how to create and handle NoSQL databases.
-- Learn how to connect a database to a website using Python and Flask.  
+- Learn how to connect a database to websites using Python and Flask.  
 - Add a functional and visually attractive website to the developer portfolio.
 
 ### User Stories  
+
+As a visitor to Open Trailer, I want to:
+
+1. Look for the site when I'm undecided about which movie to watch tonight.
+2. By browsing the site, rediscover a movie that I had forgotten.
+3. Share a movie that I consider underrated with people with my same passion.
+4. Share a movie quote that inspired me.
+5. Returning to the site to find new content uploaded by other users.
 
 ### Design Choices  
 
