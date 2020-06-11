@@ -221,7 +221,7 @@ body {
 
 /* The text of this button appears only in large viewports */
 #btn-add-trailer span {
-    display: none !important;
+    display: none;
 }
 
 
