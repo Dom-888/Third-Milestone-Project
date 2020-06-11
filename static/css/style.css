@@ -280,6 +280,9 @@ input {
 
 /* Tablets */
 @media only screen and (min-width: 768px){
+    .background-img {
+    background: url(../images/background-md.jpg)
+    }
 
     #btn-add-trailer span {
         display: inline;
