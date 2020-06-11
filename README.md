@@ -294,4 +294,9 @@ To get the MONGO_URI read the point 8 of the [**previous section**](#how-to-run-
 ### Media
 ### Acknowledgments
 
+- I received assistance, feedback and encouragement from my mentor [Seun Owonikoko](https://github.com/seunkoko).  
+- I received help and suggestions from [Code Institute](https://codeinstitute.net/) tutors.  
+- The project code has been reviewed by the [Code Institute](https://codeinstitute.net/) Slack community.  
+- This project takes inspiration from [IMDb](https://www.imdb.com/).
+
 ## Disclaimer
