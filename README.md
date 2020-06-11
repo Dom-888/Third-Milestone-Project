@@ -291,7 +291,17 @@ To get the MONGO_URI read the point 8 of the [**previous section**](#how-to-run-
 
 ## Credits
 ### Code
+
+- To make Youtube videos responsive is from [Css-Trick](https://css-tricks.com/fluid-width-video/).   
+- To create the Return-to-top Button is from [W3Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp).  
+- To create the Load-more Button is from [StackOverflow](https://stackoverflow.com/questions/17736786/jquery-load-first-3-elements-click-load-more-to-display-next-5-elements).  
+
 ### Media
+
+- The small background image was downloaded from [this article](https://www.denofgeek.com/movies/the-issue-with-movie-theater-lights-coming-up-early/).  
+- The large background image was downloaded from [this article](https://www.inlander.com/spokane/tv-streaming-pandemic-movie-theaters-meet-their-next-big-challenge/Content?oid=19342016).  
+- The 404 image was created by the author starting from [this icon](https://thenounproject.com/term/film-reel/16712/).  
+
 ### Acknowledgments
 
 - I received assistance, feedback and encouragement from my mentor [Seun Owonikoko](https://github.com/seunkoko).  
