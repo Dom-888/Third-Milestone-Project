@@ -213,7 +213,7 @@ The website has been successfully tested with the following devices:
 
 ### Simulated Devices
 
-[BrowserStack](https://www.browserstack.com/): was used to test the project on the following simulated devices:
+[BrowserStack](https://www.browserstack.com/): was used to test the website on the following simulated devices:
 
 ```  
 | -----------|---------------------------- |----------|  
