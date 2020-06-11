@@ -325,38 +325,29 @@ If an Ad blocker is active on the browser, the console throws multiple errors an
 
 ### How to run this project locally
 
-1. Save a copy of the [GitHub](https://github.com/) repository located at https://github.com/Dom-888/Third-Milestone-Project by clicking the on "Clone or download ▼", then "Download ZIP" and extracting the zip file to your chosen folder. 
-Alternatively, if you have [Git](https://git-scm.com/) installed on your system, you can clone the repository with the following command:
-```
-git clone https://github.com/Dom-888/Third-Milestone-Project
-```
+In case you want to pull the code from my Github repository:  
+1. Log in to Github,  
 
-2. If possible open a terminal session in the unzip folder or cd to the correct location.
+2. Follow [this](https://github.com/Dom-888/Third-Milestone-Project) link to the project repository.  
 
-3. A virtual environment is recommended for the Python interpreter (Note that your python commands may differ, check the [Python Documentation on virtual environments]https://docs.python.org/3/library/venv.html) for further instructions).
-Enter the command:
-```
-python -m .venv venv
-```
-4. Activate the .venv with the command:
+3. In the repository page, click **Clone or download ▼**.  
 
-```
-venv\Scripts\activate 
-```
+4. To clone the repository using HTTPS, under "Clone with HTTPS", click the clipboard icon. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click **Use SSH**, then click the clipboard icon.  
 
-5. If needed, upgrade pip locally with:
-```
-pip install --upgrade pip.
-```
+5. Open Git Bash.  
 
-6. Install all required modules with the command:
+6. Change the current working directory to the location where you want the cloned directory to be made.  
+
+7. Type `git clone`, and then paste the URL you copied in Step 3.  
+
+8. Install all required modules with the command:
 ```
 pip -r requirements.txt.
 ```
 
-7. Create your own database on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) or MongoDB running locally on your machine. Call the database "openTrailers", with a collection called "trailers". I also suggest creating a few documents for testing purposes.
+9. Create your own database on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) or MongoDB running locally on your machine. Call the database "openTrailers", with a collection called "trailers". I also suggest creating a few documents for testing purposes.
 
-8. Now you need the MONGO_URI to connect the repository to the database, to find the it on [Atlas](https://www.mongodb.com/cloud/atlas) click on "Cluster" -> "Connect" -> "Connect your application"; Here chose the lastest version of Python, you will get a link like the following:
+10. Now you need the MONGO_URI to connect the repository to the database, to find the it on [Atlas](https://www.mongodb.com/cloud/atlas) click on "Cluster" -> "Connect" -> "Connect your application"; Here chose the lastest version of Python, you will get a string like the following:
 
 ```
 mongodb+srv://my_username:<password>@my_cluster-1hvju.mongodb.net/<dbname>?retryWrites=true&w=majority
@@ -364,9 +355,9 @@ mongodb+srv://my_username:<password>@my_cluster-1hvju.mongodb.net/<dbname>?retry
 
 Replace <password> with your Atlas password and <dbname> with "openTrailer".
 
-9. In your local IDE create a file called `env.py`.
+11. Create a file called `env.py`.
 
-10. Inside the env.py file import os, create a "conection_string" variable and assign it to the MONGO_URI.
+12. Inside the env.py file import os, create a "conection_string" variable and assign it to the MONGO_URI.
 The final content of your env.py should look like this:
 
 ```
@@ -375,12 +366,12 @@ import os
 os.environ["connection_string"] = "mongodb+srv://my_username:<password>@my_cluster-1hvju.mongodb.net/<dbname>?retryWrites=true&w=majority" 
 ````
 
-11. You can now run the application with the command:
+13. You can now run the application with the command:
 ```
 python app.py
 ```
 
-12. You can visit the website at `http://127.0.0.1:5000`
+14. You can visit the website at `http://127.0.0.1:5000`
 
 ## Heroku Deployment
 
@@ -415,7 +406,7 @@ echo web: python app.py > Procfile
 |---------------------------------|
 ```
 
-To get the MONGO_URI read the point 8 of the [**previous section**](#how-to-run-this-project-locally).
+To get the MONGO_URI read the step 10 of the [**previous section**](#how-to-run-this-project-locally).
 
 6. Click on "Deploy" -> "Deployment method" and select GitHub. Select the correct repository and click "Connect".
 
