@@ -146,7 +146,7 @@ The input fields present in the modal are the following:
 At present it is only possible to upload videos from Youtube, the next step is to add support to the other 2 major video hosting platforms: Vimeo and Dailymotion.
 
 ##### Category Search
-Give the user the possibility to add the film genre to the trailer files in order to make the search by category possible.
+Give the user the ability to add the movie genre to the trailer files in order to make the search by category possible.
 
 ## Technologies Used
   
