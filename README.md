@@ -300,7 +300,7 @@ The website has been successfully tested with the following devices:
 - Click the button, confirm that 12 (or less) trailers are loaded.
 - Confirm that the _Load-more Button_ is not visible when all trailers have been loaded.
 
-8. **404 Page
+8. **404 Page**
 - Enter a deliberately incorrect URL in the address bar, confirm it takes the user to page 404.
 - Verify that message 404 and the _Return Home_ button are displayed correctly.
 - Hover on the _Return Home_ button, confirm the hover effect works as expected.
@@ -314,6 +314,12 @@ The following validation services were used to check the validity of the website
 - [Python syntax checker](https://extendsclass.com/python-tester.html) was used to test the Python code.
 
 ### Bugs Discovered
+
+#### Problem with Ad blocker
+If an Ad blocker is active on the browser, the console throws multiple errors and the site loading is slower.
+
+#### Problem with unusual Youtube URLs (fixed)
+
 
 ## Deployment
 
