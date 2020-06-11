@@ -15,7 +15,7 @@ function loadMoreTrailer() {
 // Hide the button if all trailers have been loaded
 function hideLoadMoreButton() {
     let n = $('#nOfTrailers').text();
-    if (trailersOnPage >= n) { $('#btn-load-more').hide(); };
+    if (trailersOnPage >= n) { $('#btn-load-more').hide(); }
 }
 
 /*---------------Modals---------------*/
@@ -40,14 +40,14 @@ function loadEditModal(trailer) {
     $('#title').val(trailerTitle);
     $('#url').val(trailerUrl);
     $('#quote').val(trailerQuote);
-};
+}
 
 // Check if the user has reached the maximum number of characters in the modal input fields, if so, show an alert message
 $("#title,#quote").keyup(function () {
     let nChar = $(this).val().length;
     let maxChar = $(this).attr('maxlength');
     if (nChar == maxChar) { $(this).next().show().text("Maximum number of characters reached! (" + maxChar + ")"); }
-    else { $(this).next().hide(); };
+    else { $(this).next().hide(); }
 });
 
 // Delete-trailer modal
@@ -57,12 +57,12 @@ function loadDeleteModal(trailer) {
     $('#modal-delete-trailer').modal("show");
     $('#btn-delete').attr("href", "/delete_trailer/" + trailerId);
     $('#modal-delete-trailer .modal-title').text("Are you sure you want to delete " + trailerTitle + " from the database?");
-};
+}
 
 /*---------------Return to top---------------*/
 
 // When the user scrolls down 20px from the top of the document, show the return-to-top button
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function() { scrollFunction(); };
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
