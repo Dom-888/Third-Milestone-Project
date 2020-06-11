@@ -236,7 +236,6 @@ body {
     display: none;
 }
 
-
 /* Increases the thickness of feather icons */
 .feather {
     stroke-width: 2.5;
@@ -322,7 +321,7 @@ input {
 /* Tablets */
 @media only screen and (min-width: 768px){
     .background-img {
-    background: url(../images/background-md.jpg)
+    background-image: url(../images/background-md.jpg)
     }
 
     #btn-add-trailer span {
