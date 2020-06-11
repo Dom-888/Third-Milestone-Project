@@ -67,6 +67,11 @@ body {
     margin: auto 1px auto 12px;
 }
 
+/* Longer searchbar for large viewports  */
+.searchbar-lg {
+    display: none;
+}
+
 /*---------------Site description---------------*/
 
 .intro {
@@ -77,6 +82,11 @@ body {
 
 .intro a {
    color: #FC8A17;
+}
+
+/* Longer introduction for large viewports */
+.intro-lg {
+    display: none;
 }
 
 /*---------------Trailers---------------*/
@@ -209,6 +219,12 @@ body {
     height: 50px;
 }
 
+/* The text of this button appears only in large viewports */
+#btn-add-trailer span {
+    display: none !important;
+}
+
+
 /* Increases the thickness of feather icons */
 .feather {
     stroke-width: 2.5;
@@ -262,25 +278,11 @@ input {
 
 /*---------------Responsive Design---------------*/
 
-/* Content intended for large viewports is hidden by default */
-.searchbar-lg,.intro-lg {
-    display: none;
-}
-
-/* Laptop and desktop view */
-@media only screen and (min-width: 1280px) and (orientation:landscape) {
-
-    .background-img {
-        background-image: url(../images/background-lg.jpg);
-        background-position: center;
-    }
-
-    .row {
-        padding: 0 15% 2%;
-    }
+/* Tablets */
+@media only screen and (min-width: 768px){
 
     #btn-add-trailer span {
-        display: inline !important;
+        display: inline;
     }
 
     .searchbar-sm,.intro-sm {
@@ -293,6 +295,24 @@ input {
 
     .intro-lg {
         display: block;
+    }
+
+    .container-404 img { 
+        max-width: 50%;
+    }
+
+}
+
+/* Laptops and desktops */
+@media only screen and (min-width: 1200px) and (orientation:landscape) {
+
+    .background-img {
+        background-image: url(../images/background-lg.jpg);
+        background-position: center;
+    }
+
+    .row {
+        padding: 0 15% 2%;
     }
 
     .container-404 img { 
