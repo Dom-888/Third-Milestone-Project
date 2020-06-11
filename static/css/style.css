@@ -320,6 +320,7 @@ input {
 
 /* Tablets */
 @media only screen and (min-width: 768px){
+
     .background-img {
     background-image: url(../images/background-md.jpg)
     }
@@ -363,4 +364,5 @@ input {
     .container-404 img { 
         max-width: 35%;
     }
+    
 }
