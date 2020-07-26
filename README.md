@@ -1,6 +1,6 @@
 # [Open Trailer](https://open-trailer.herokuapp.com/)
 
-An open database for movie trailers.
+An open database for movie trailers, built with Flask.
 
 !["Responsive Representation"](static/images/responsive-representation.png "Responsive Representation")
 
