@@ -2,6 +2,8 @@
 
 An open database for movie trailers, built with Flask.
 
+For a live preview of the the website click [here.](https://open-trailer.herokuapp.com/)
+
 !["Responsive Representation"](static/images/responsive-representation.png "Responsive Representation")
 
 ## Table of Contents
